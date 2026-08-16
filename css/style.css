@@ -130,7 +130,7 @@ main section { padding: 4.5rem 0 1rem; }
 .carousel-track:focus-visible { box-shadow: inset 0 0 0 2px var(--accent); border-radius: var(--radius); }
 
 /* enhanced (JS on): snap + focus states */
-.carousel-track.is-enhanced { scroll-snap-type: x mandatory; }
+.carousel-track.is-enhanced { scroll-snap-type: x proximity; }
 .carousel-track.is-enhanced .project {
   flex: 0 0 var(--card-w); width: var(--card-w);
   scroll-snap-align: center;
