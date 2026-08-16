@@ -12,7 +12,7 @@
   --radius: 14px;
 }
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --bg: #171613;
     --bg-raised: #1f1d1a;
     --ink: #ece8e1;
@@ -23,6 +23,17 @@
     --tag-bg: #2a2723;
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
   }
+}
+:root[data-theme="dark"] {
+  --bg: #171613;
+  --bg-raised: #1f1d1a;
+  --ink: #ece8e1;
+  --ink-soft: #a8a196;
+  --line: #34312b;
+  --accent: #38bdd8;
+  --accent-ink: #10222a;
+  --tag-bg: #2a2723;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
 }
 
 /* ===== base ===== */
@@ -56,6 +67,26 @@ main section { padding: 4.5rem 0 1rem; }
 .nav-links { display: flex; gap: 1.3rem; }
 .nav-links a { color: var(--ink-soft); font-size: 0.95rem; }
 .nav-links a:hover { color: var(--accent); text-decoration: none; }
+
+/* theme toggle */
+.theme-toggle {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 2rem; height: 2rem; padding: 0;
+  border: 1px solid var(--line); border-radius: 999px;
+  background: var(--bg-raised); color: var(--ink-soft); cursor: pointer;
+}
+.theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
+/* light theme shows the moon (switch to dark); dark theme shows the sun */
+.theme-toggle .icon-sun { display: none; }
+.theme-toggle .icon-moon { display: block; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle .icon-sun { display: block; }
+  :root:not([data-theme="light"]) .theme-toggle .icon-moon { display: none; }
+}
+:root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+:root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+:root[data-theme="light"] .theme-toggle .icon-sun { display: none; }
+:root[data-theme="light"] .theme-toggle .icon-moon { display: block; }
 
 /* ===== hero ===== */
 .hero { padding: 6rem 1.4rem 3.5rem; }
@@ -104,6 +135,9 @@ main section { padding: 4.5rem 0 1rem; }
 .demo { grid-column: 1 / -1; margin-top: 0.6rem; }
 .demo video, .demo > img { display: block; width: 100%; border-radius: var(--radius); border: 1px solid var(--line); box-shadow: var(--shadow); }
 .demo figcaption { color: var(--ink-soft); font-size: 0.88rem; margin-top: 0.55rem; }
+.demo-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.demo-duo figcaption { grid-column: 1 / -1; margin-top: 0; }
+@media (max-width: 760px) { .demo-duo { grid-template-columns: 1fr; } }
 
 /* ===== research cards ===== */
 .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; }
@@ -151,4 +185,5 @@ footer .cta-row { justify-content: center; margin-top: 1.4rem; }
   .timeline li, .skills div { grid-template-columns: 1fr; gap: 0.2rem; }
   .nav-links { gap: 0.9rem; }
   .nav-links a:nth-child(n+3) { display: none; }
+  .theme-toggle { display: inline-flex; }
 }
