@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catherine Awad — Software Engineer</title>
+<meta name="description" content="Catherine Awad — software engineer building Flutter apps end to end, from UI to backend to firmware, with research work in LLM evaluation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="wrap">
+    <a class="brand" href="#top">Catherine Awad</a>
+    <div class="nav-links">
+      <a href="#projects">Projects</a>
+      <a href="#research">Research</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero wrap">
+    <p class="kicker">Bay Area, CA</p>
+    <h1>Software engineer who ships <em>whole products</em> — from Flutter UI down to backend and firmware.</h1>
+    <p class="lede">
+      I'm Catherine — an M.S. Computer Science &amp; Engineering student at Santa Clara University
+      with 5+ years of programming experience. I build cross-platform mobile apps end to end,
+      and I do research on evaluating large language models.
+    </p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="mailto:catherinef.awad@gmail.com">Email me</a>
+      <a class="btn" href="https://www.linkedin.com/in/catherine-awad-6b9884119/" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/c-awad" rel="noopener">GitHub</a>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects" class="wrap">
+    <h2>Projects</h2>
+
+    <article class="project">
+      <div class="project-info">
+        <h3>Volunteer Service Management App</h3>
+        <p class="tags"><span>Flutter</span><span>Firebase</span><span>Riverpod</span><span>Cloud Functions</span></p>
+        <p>
+          Built solo, from scratch, for a volunteer organization in Egypt: a bilingual
+          (Arabic/English) app that organizes records of the visually impaired and elderly
+          community members served, plus volunteers, groups, and announcements.
+        </p>
+        <p>
+          Role-based access with admin approval flows, audit logging, timezone-aware push
+          notifications (FCM + Cloud Functions), and compressed, cached image handling on
+          Firebase. Live on Google Play. The full right-to-left Arabic interface is a
+          first-class citizen, not an afterthought.
+        </p>
+      </div>
+      <div class="shots">
+        <img src="assets/volunteer/01_login_en.png" alt="Volunteer app login screen in English" loading="lazy">
+        <img src="assets/volunteer/02_login_ar.png" alt="Volunteer app login screen in Arabic, fully right-to-left" loading="lazy">
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-info">
+        <h3>IncidentAid</h3>
+        <p class="tags"><span>Flutter</span><span>Firebase</span><span>Riverpod</span><span>Google Maps</span><span>BLE</span></p>
+        <p>
+          An incident-reporting and response-coordination app for firefighters, built at
+          Santa Clara University's EPIC Lab — I'm its primary developer.
+        </p>
+        <p>
+          Rearchitected the app end to end: Riverpod state management, a repository-pattern
+          data layer, a migration from Firebase Realtime Database to Firestore, and role-based
+          dashboards and navigation. Integrated Google Maps/Places, BLE beacon scanning, and
+          real-time alert flows, with isolated prod/dev Firebase environments.
+        </p>
+      </div>
+      <div class="shots">
+        <img src="assets/incidentaid/03_captain_dashboard_home.png" alt="IncidentAid captain dashboard with station readiness and active incidents" loading="lazy">
+        <img src="assets/incidentaid/04_crew_tab.png" alt="IncidentAid crew management tab" loading="lazy">
+        <img src="assets/incidentaid/01_login.png" alt="IncidentAid login screen" loading="lazy">
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-info">
+        <h3>Hydration Automation</h3>
+        <p class="tags"><span>Flutter</span><span>Node.js/Express</span><span>Arduino&nbsp;C++</span><span>LoRa</span><span>NFC</span></p>
+        <p>
+          An IoT platform for real-time monitoring of agricultural hydration systems,
+          built at the EPIC Lab — I work across every tier of the stack.
+        </p>
+        <p>
+          I built the cross-platform Flutter app (NFC- and QR-based device onboarding,
+          real-time sensor dashboards, localization, CI), wrote the embedded firmware
+          (Arduino/C++ on SAMD21 with LoRa: ACK-gated transmission with offline queueing,
+          NTP-disciplined clocks, OTA-refreshed device whitelists, battery telemetry), and
+          co-developed the Express backend with server-side timestamping, deduplication, and
+          passwordless magic-link sign-in.
+        </p>
+      </div>
+      <div class="shots">
+        <img src="assets/ha/01_signin.png" alt="Hydration Automation sign-in screen" loading="lazy">
+        <img src="assets/ha/02_register.png" alt="Hydration Automation account creation screen" loading="lazy">
+      </div>
+    </article>
+
+    <article class="project no-shots">
+      <div class="project-info">
+        <h3>BeyondList</h3>
+        <p class="tags"><span>Flutter</span><span>Firebase</span><span>Spring Boot</span><span>PostgreSQL</span></p>
+        <p>
+          A real-time collaborative shopping-list and expense app for roommates and family —
+          deliberately built twice to learn two stacks: an original Flutter + Firebase version,
+          then a rewrite with a Java Spring Boot backend (OAuth2/JWT, JPA, PostgreSQL).
+        </p>
+      </div>
+    </article>
+
+    <article class="project no-shots">
+      <div class="project-info">
+        <h3>Frona</h3>
+        <p class="tags"><span>Flutter</span><span>Scala</span><span>gRPC</span><span>AWS</span><span>Docker</span></p>
+        <p>
+          Co-founded Frona Tech and led a team of four engineers building a cross-platform
+          diet and fitness app. Took the product from concept to release on the App Store
+          and Google Play. The company has since wound down.
+        </p>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ RESEARCH ============ -->
+  <section id="research" class="wrap">
+    <h2>Research</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>MedicalQA</h3>
+        <p class="tags"><span>LLMs</span><span>RAG</span><span>Supabase</span></p>
+        <p>
+          Extending an LLM system that generates caregiver question–answer pairs from
+          dementia-care videos, and evaluating generation quality across model pipelines.
+          Built the human-annotation web app used to validate the evaluation rubric.
+        </p>
+      </div>
+      <div class="card">
+        <h3>McMiner</h3>
+        <p class="tags"><span>LLMs</span><span>pass@k</span><span>Python</span></p>
+        <p>
+          A misconception-mining method for LLM code tutoring, evaluated with pass@k on the
+          EvoCodeBench dataset. Built a fault-tolerant GPU evaluation harness and a demo
+          web app comparing tutoring dialogues side by side.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Medical Anomaly Detection</h3>
+        <p class="tags"><span>CLIP</span><span>LoRA</span><span>PyTorch</span></p>
+        <p>
+          Few-shot anomaly detection on 26k+ chest X-rays with CLIP and LoRA fine-tuning;
+          multiple anomaly-scoring methods improved through model fusion and regularization.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Arabic Text-to-Speech</h3>
+        <p class="tags"><span>Tacotron&nbsp;2</span><span>Deep Learning</span></p>
+        <p>
+          B.S. thesis: implemented Tacotron 2 for multi-speaker speech synthesis and
+          fine-tuned it on an Egyptian-dialect Arabic dataset to generate realistic speech.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section id="experience" class="wrap">
+    <h2>Experience</h2>
+    <ul class="timeline">
+      <li>
+        <span class="when">May 2026 – Present</span>
+        <div>
+          <h3>AI Research Assistant — AIM Lab, Santa Clara University</h3>
+          <p>LLM generation-and-evaluation systems for dementia-caregiver QA and code tutoring.</p>
+        </div>
+      </li>
+      <li>
+        <span class="when">2025 – Present</span>
+        <div>
+          <h3>Software Engineering Research Assistant — EPIC Lab, Santa Clara University</h3>
+          <p>Developing the lab's IoT and emergency-response applications, Hydration Automation and IncidentAid.</p>
+        </div>
+      </li>
+      <li>
+        <span class="when">2021 – 2023</span>
+        <div>
+          <h3>Co-Founder &amp; Lead Engineer — Frona Tech, Egypt</h3>
+          <p>Led a team of four engineers from concept to release on both app stores.</p>
+        </div>
+      </li>
+      <li>
+        <span class="when">2019 – 2020</span>
+        <div>
+          <h3>Teaching Assistant — Alexandria University</h3>
+          <p>Taught classes and labs in Programming, Design of Algorithms, and Operating Systems.</p>
+        </div>
+      </li>
+    </ul>
+
+    <h2 class="sub">Education</h2>
+    <ul class="timeline">
+      <li>
+        <span class="when">Jan 2025 – Dec 2026 (exp.)</span>
+        <div>
+          <h3>M.S. Computer Science &amp; Engineering — Santa Clara University</h3>
+          <p>GPA 3.87</p>
+        </div>
+      </li>
+      <li>
+        <span class="when">2019</span>
+        <div>
+          <h3>B.S. Computer &amp; Communications Engineering — Alexandria University</h3>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills" class="wrap">
+    <h2>Skills</h2>
+    <dl class="skills">
+      <div><dt>Languages</dt><dd>Java, Python, Dart, Scala, C, C++, JavaScript, SQL</dd></div>
+      <div><dt>Frameworks &amp; Tools</dt><dd>Flutter, Spring Boot, Node.js/Express, PyTorch, scikit-learn, Hugging Face Transformers, Firebase, MongoDB, PostgreSQL, Supabase, AWS, Docker, Git, Claude Code, Figma</dd></div>
+      <div><dt>AI / ML</dt><dd>Deep learning, computer vision, NLP, LLMs, RAG, LoRA, transfer learning, model evaluation</dd></div>
+      <div><dt>Hardware &amp; Embedded</dt><dd>Verilog, SystemVerilog, SAMD21/Arduino firmware, LoRa, Assembly (x86, MIPS)</dd></div>
+      <div><dt>Spoken</dt><dd>Arabic (fluent), English (fluent)</dd></div>
+    </dl>
+  </section>
+
+  <!-- ============ BEYOND ============ -->
+  <section id="beyond" class="wrap">
+    <h2>Beyond code</h2>
+    <p class="prose">
+      I've volunteered for 15+ years with elderly people, orphans, and people with disabilities
+      in Egypt, and since 2020 I've led volunteer training and coordination at the same
+      organization — the one I built the management app above for. The best software I've
+      shipped is the kind my own community depends on.
+    </p>
+  </section>
+
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <h2>Get in touch</h2>
+    <p><a class="big-link" href="mailto:catherinef.awad@gmail.com">catherinef.awad@gmail.com</a></p>
+    <div class="cta-row">
+      <a class="btn" href="https://www.linkedin.com/in/catherine-awad-6b9884119/" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/c-awad" rel="noopener">GitHub</a>
+    </div>
+    <p class="fine">© 2026 Catherine Awad · Built by hand, no frameworks.</p>
+  </div>
+</footer>
+
+</body>
+</html>
