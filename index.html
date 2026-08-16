@@ -183,7 +183,7 @@
 
       <div class="card">
         <h3>McMiner — Misconception Mining for LLM Code Tutoring</h3>
-        <p class="meta">AIM Lab, Santa Clara University · ongoing · co-developed</p>
+        <p class="meta">Started as a graduate course project · continuing as directed research with the AIM Lab, Santa Clara University</p>
         <p class="tags"><span>LLMs</span><span>pass@k</span><span>EvoCodeBench</span><span>Python</span></p>
         <p>
           When an LLM tutors a weaker model (or a student) on a coding task, generic hints
@@ -211,16 +211,35 @@
 
       <div class="card">
         <h3>Medical Anomaly Detection with Vision-Language Models</h3>
-        <p class="tags"><span>CLIP</span><span>LoRA</span><span>PyTorch</span></p>
+        <p class="meta">Four-person team project</p>
+        <p class="tags"><span>CLIP</span><span>MVFA</span><span>LoRA</span><span>PyTorch</span></p>
         <p>
-          Labeled medical imaging data is scarce, so this project asks how far a general
-          vision-language model can go on chest X-rays with only a few labeled examples.
-          Starting from CLIP, I applied LoRA fine-tuning on the RSNA dataset (26k+ chest
-          X-ray images) for few-shot anomaly detection.
+          Labeled medical imaging data is scarce, so we asked how much anomaly-detection
+          performance a general vision-language model can deliver on chest X-rays with only
+          a handful of labeled examples. We implemented and extended the MVFA (Multi-level
+          Visual Feature Adaptation) framework on top of CLIP (ViT-L/14): images and medical
+          text prompts are embedded into a shared space, and anomaly scores come from
+          comparing image features against descriptions of normal and abnormal findings.
+          Experiments ran on the RSNA pneumonia dataset (~29k chest radiographs, filtered
+          to a 17k-image benchmark), evaluated with AUROC across zero-shot and
+          2/4/8/16-shot regimes.
         </p>
         <p>
-          I implemented and compared multiple anomaly-scoring methods on top of the adapted
-          model, then improved performance further through model fusion and regularization.
+          We ran sixteen controlled configurations to isolate what actually helps under
+          scarce supervision: adapter regularization, medical-domain prompt ensembling,
+          LoRA injected into the final ViT blocks, a lightweight MLP that regresses anomaly
+          scores directly from visual features, and a calibrated three-score fusion of
+          cosine similarity, Mahalanobis distance, and energy scoring. My focus was the
+          scoring side — implementing the anomaly-scoring methods and improving performance
+          through score fusion and regularization.
+        </p>
+        <p>
+          The experiments revealed a clean scaling picture: heavy regularization wins at
+          2-shot, learned score fusion at 4-shot, and direct MLP scoring dominates from
+          8-shot up — peaking at 0.884 AUROC at 16-shot, ahead of the original MVFA paper's
+          reported results. All experiments ran on NVIDIA V100s on the university's WAVE
+          HPC cluster, so there is no public repo; the submitted report holds the full
+          experiment matrix.
         </p>
       </div>
 
