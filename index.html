@@ -454,14 +454,34 @@
       return dot;
     });
 
+    // Chrome cancels smooth programmatic scrolling inside a scroll-snap
+    // container, so animate scrollLeft directly with snapping paused.
+    var raf = 0;
+    function animateTo(target) {
+      cancelAnimationFrame(raf);
+      var start = track.scrollLeft;
+      var delta = target - start;
+      var began = null;
+      var duration = 420;
+      track.style.scrollSnapType = 'none';
+      function step(now) {
+        if (began === null) began = now;
+        var p = Math.min(1, (now - began) / duration);
+        var eased = p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2;
+        track.scrollLeft = start + delta * eased;
+        if (p < 1) raf = requestAnimationFrame(step);
+        else track.style.scrollSnapType = '';
+      }
+      raf = requestAnimationFrame(step);
+    }
+
     function center(i, jump) {
       var card = cards[i];
       if (!card) return;
-      card.scrollIntoView({
-        behavior: (jump || reduce) ? 'auto' : 'smooth',
-        inline: 'center',
-        block: 'nearest'
-      });
+      var target = card.offsetLeft - (track.clientWidth - card.offsetWidth) / 2;
+      target = Math.max(0, Math.min(target, track.scrollWidth - track.clientWidth));
+      if (jump || reduce) { cancelAnimationFrame(raf); track.scrollLeft = target; }
+      else animateTo(target);
     }
 
     function update() {
