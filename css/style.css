@@ -40,7 +40,7 @@ h1, h2, h3 { font-family: "Fraunces", Georgia, serif; font-weight: 600; line-hei
 h2 { font-size: 1.9rem; margin: 0 0 1.6rem; }
 h2.sub { margin-top: 3rem; }
 h3 { font-size: 1.25rem; margin-bottom: 0.4rem; }
-.wrap { max-width: 1060px; margin: 0 auto; padding: 0 1.4rem; }
+.wrap { max-width: 1160px; margin: 0 auto; padding: 0 1.4rem; }
 main section { padding: 4.5rem 0 1rem; }
 
 /* ===== header ===== */
@@ -65,7 +65,7 @@ main section { padding: 4.5rem 0 1rem; }
 }
 .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); max-width: 21ch; }
 .hero h1 em { font-style: italic; color: var(--accent); }
-.lede { max-width: 58ch; margin: 1.4rem 0 2rem; color: var(--ink-soft); font-size: 1.08rem; }
+.lede { max-width: 62ch; margin: 1.4rem 0 2rem; color: var(--ink-soft); font-size: 1.08rem; }
 
 /* ===== buttons ===== */
 .cta-row { display: flex; flex-wrap: wrap; gap: 0.7rem; }
@@ -114,7 +114,7 @@ main section { padding: 4.5rem 0 1rem; }
 }
 .card p { color: var(--ink-soft); font-size: 0.95rem; }
 .card-grid.stack .card { padding: 1.8rem; }
-.card-grid.stack .card p { font-size: 1rem; max-width: 72ch; }
+.card-grid.stack .card p { font-size: 1rem; max-width: 78ch; }
 .card-grid.stack .card p + p { margin-top: 0.8rem; }
 .card .meta { color: var(--accent); font-size: 0.85rem; font-weight: 600; margin: 0.1rem 0 0.5rem; }
 
@@ -136,7 +136,8 @@ main section { padding: 4.5rem 0 1rem; }
 .skills dd { color: var(--ink-soft); }
 
 /* ===== beyond / prose ===== */
-.prose { max-width: 62ch; color: var(--ink-soft); }
+.prose { max-width: 66ch; color: var(--ink-soft); }
+#beyond h2, #beyond .prose { max-width: 66ch; margin-left: auto; margin-right: auto; }
 
 /* ===== footer ===== */
 footer { margin-top: 4.5rem; padding: 4rem 0 2.5rem; background: var(--bg-raised); border-top: 1px solid var(--line); text-align: center; }
