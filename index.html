@@ -125,10 +125,18 @@
           co-developed the Express backend with server-side timestamping, deduplication, and
           passwordless magic-link sign-in.
         </p>
+        <p>
+          I also built the project's public website, hydrationautomation.com — responsive,
+          localized in two languages, with light and dark themes.
+        </p>
       </div>
       <div class="shots">
+        <img src="assets/ha/03_dashboard_light.png" alt="Hydration Automation dashboard with farm map and moisture gauge" loading="lazy">
+        <img src="assets/ha/04_dashboard_stats_light.png" alt="Dashboard metric tiles: temperature, humidity, soil moisture, stations online" loading="lazy">
+        <img src="assets/ha/05_stations_light.png" alt="Stations list with live sensor telemetry" loading="lazy">
+        <img src="assets/ha/06_dashboard_dark.png" alt="Dashboard in dark mode" loading="lazy">
+        <img src="assets/ha/07_stations_dark.png" alt="Stations list in dark mode" loading="lazy">
         <img src="assets/ha/01_signin.png" alt="Hydration Automation sign-in screen" loading="lazy">
-        <img src="assets/ha/02_register.png" alt="Hydration Automation account creation screen" loading="lazy">
       </div>
     </article>
 
@@ -185,9 +193,10 @@
           My contributions: I brought in the Teepa Snow dementia-care video dataset,
           added reproducibility controls (seeding, temperature, and decoding configuration)
           so pipeline comparisons are apples-to-apples, and built the human-annotation web
-          app (React/Vite + Supabase, deployed on Netlify) that annotators use to rate
-          generated QA pairs. I then analyzed the human judgments collected over the
-          supported training videos to validate the evaluation rubric itself.
+          app (React/Vite + Supabase, deployed on Netlify) where annotators rate the
+          generated QA pairs, with every judgment stored in Supabase for analysis. I then
+          analyzed the judgments collected over the supported training videos to validate
+          the evaluation rubric itself.
         </p>
       </div>
 
@@ -207,8 +216,11 @@
           difficulty and tutoring round, baseline versus McMiner. Because multi-round
           evaluation over a full benchmark takes many GPU-hours, I built a fault-tolerant
           evaluation harness on GPU pods that auto-pauses and resumes across multi-hour
-          model-server outages instead of losing runs. I also built a demo web app that
-          shows baseline and McMiner tutoring dialogues side by side.
+          model-server outages instead of losing runs. I also built the demo web app below:
+          it replays recorded tutoring dialogues side by side (baseline vs. McMiner, by task
+          and student level), and has a semi-live mode that generates fresh sessions against
+          real model APIs in parallel panes, using visitor-supplied API keys that never leave
+          the browser.
         </p>
         <p class="repo-link">
           <a href="https://mcminer-coding-tutor.netlify.app" rel="noopener">Live demo — baseline vs. McMiner dialogues →</a><br>
