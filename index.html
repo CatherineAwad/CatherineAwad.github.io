@@ -148,45 +148,89 @@
   <!-- ============ RESEARCH ============ -->
   <section id="research" class="wrap">
     <h2>Research</h2>
-    <div class="card-grid">
+    <div class="card-grid stack">
+
       <div class="card">
-        <h3>MedicalQA</h3>
-        <p class="tags"><span>LLMs</span><span>RAG</span><span>Supabase</span></p>
+        <h3>MedicalQA — Caregiver QA Generation &amp; Evaluation</h3>
+        <p class="meta">AIM Lab, Santa Clara University · ongoing</p>
+        <p class="tags"><span>LLMs</span><span>RAG</span><span>React/Vite</span><span>Supabase</span></p>
         <p>
-          Extending an LLM system that generates caregiver question–answer pairs from
-          dementia-care videos, and evaluating generation quality across model pipelines.
-          Built the human-annotation web app used to validate the evaluation rubric.
+          Family caregivers of people with dementia rarely have time to sit through hours of
+          training videos. MedicalQA extends the AIM Lab's MentorQA framework into an LLM
+          system that generates caregiver question–answer pairs directly from dementia-care
+          training videos, so the guidance in them becomes searchable and conversational.
+          Generation quality is compared across several pipelines: a single-agent baseline,
+          multi-agent chunking, topic segmentation, and retrieval-augmented generation.
+        </p>
+        <p>
+          My contributions: I brought in the Teepa Snow dementia-care video dataset,
+          added reproducibility controls (seeding, temperature, and decoding configuration)
+          so pipeline comparisons are apples-to-apples, and built the human-annotation web
+          app (React/Vite + Supabase, deployed on Netlify) that annotators use to rate
+          generated QA pairs. I then analyzed the human judgments collected over the
+          supported training videos to validate the evaluation rubric itself.
         </p>
       </div>
+
       <div class="card">
-        <h3>McMiner</h3>
-        <p class="tags"><span>LLMs</span><span>pass@k</span><span>Python</span></p>
+        <h3>McMiner — Misconception Mining for LLM Code Tutoring</h3>
+        <p class="meta">AIM Lab, Santa Clara University · ongoing · co-developed</p>
+        <p class="tags"><span>LLMs</span><span>pass@k</span><span>EvoCodeBench</span><span>Python</span></p>
         <p>
-          A misconception-mining method for LLM code tutoring, evaluated with pass@k on the
-          EvoCodeBench dataset. Built a fault-tolerant GPU evaluation harness and a demo
-          web app comparing tutoring dialogues side by side.
+          When an LLM tutors a weaker model (or a student) on a coding task, generic hints
+          waste rounds. McMiner is a "misconception-in-the-loop" tutoring method built on
+          top of TRAVER: the tutor first poses a diagnostic completion, mines the student's
+          specific misconception from the attempt, and injects that misconception into the
+          next tutoring round — so every hint targets what the student actually got wrong.
+        </p>
+        <p>
+          We evaluate with pass@1/5/10 on the EvoCodeBench dataset, broken down by task
+          difficulty and tutoring round, baseline versus McMiner. Because multi-round
+          evaluation over a full benchmark takes many GPU-hours, I built a fault-tolerant
+          evaluation harness on GPU pods that auto-pauses and resumes across multi-hour
+          model-server outages instead of losing runs. I also built a demo web app that
+          shows baseline and McMiner tutoring dialogues side by side.
         </p>
       </div>
+
       <div class="card">
-        <h3>Medical Anomaly Detection</h3>
+        <h3>Medical Anomaly Detection with Vision-Language Models</h3>
         <p class="tags"><span>CLIP</span><span>LoRA</span><span>PyTorch</span></p>
         <p>
-          Few-shot anomaly detection on 26k+ chest X-rays with CLIP and LoRA fine-tuning;
-          multiple anomaly-scoring methods improved through model fusion and regularization.
+          Labeled medical imaging data is scarce, so this project asks how far a general
+          vision-language model can go on chest X-rays with only a few labeled examples.
+          Starting from CLIP, I applied LoRA fine-tuning on the RSNA dataset (26k+ chest
+          X-ray images) for few-shot anomaly detection.
+        </p>
+        <p>
+          I implemented and compared multiple anomaly-scoring methods on top of the adapted
+          model, then improved performance further through model fusion and regularization.
         </p>
       </div>
+
       <div class="card">
-        <h3>Arabic Text-to-Speech</h3>
-        <p class="tags"><span>Tacotron&nbsp;2</span><span>Deep Learning</span></p>
+        <h3>TTS &amp; Voice Imitation</h3>
+        <p class="meta">B.S. graduation thesis (team of six), Alexandria University · 2019</p>
+        <p class="tags"><span>Tacotron&nbsp;2</span><span>Speech Synthesis</span><span>Deep Learning</span></p>
         <p>
-          B.S. thesis: implemented Tacotron 2 for multi-speaker speech synthesis and
-          fine-tuned it on an Egyptian-dialect Arabic dataset to generate realistic speech.
+          A neural text-to-speech system that generates speech in the voice of different
+          speakers — including speakers never seen during training. The system consists of
+          three separately trained models built around a Tacotron 2 synthesizer: it takes
+          text plus a reference voice and produces speech in that voice. We also built a
+          simple app to interact with the model.
+        </p>
+        <p>
+          Beyond the English models, we added an Egyptian-dialect Arabic dataset and
+          fine-tuned the system to generate realistic Arabic speech — a language where
+          dialectal TTS training resources are scarce. The slides below link to generated
+          voice samples you can listen to.
         </p>
         <p class="repo-link">
           <a href="assets/tts-voice-imitation-thesis.pdf" rel="noopener">Read the thesis (PDF, 9.5&nbsp;MB) →</a><br>
           <a href="https://docs.google.com/presentation/d/1iJ-YoK-MeUG0BKsTJry_cjG-LgUnQ9Eslm_7-5JDA8Q/" rel="noopener">Slides with voice samples →</a>
         </p>
       </div>
+
     </div>
   </section>
 
