@@ -1,6 +1,6 @@
 # catherineawad.github.io
 
-Personal portfolio site — hand-written static HTML/CSS, no frameworks, no build step.
+Personal portfolio site — static HTML/CSS, no frameworks, no build step.
 
 Live at **https://catherineawad.github.io**
 
