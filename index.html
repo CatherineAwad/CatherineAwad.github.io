@@ -464,6 +464,12 @@
       var began = null;
       var duration = 420;
       track.style.scrollSnapType = 'none';
+      if (document.hidden) { // no frames while hidden — land immediately
+        track.scrollLeft = target;
+        track.style.scrollSnapType = '';
+        update();
+        return;
+      }
       function step(now) {
         if (began === null) began = now;
         var p = Math.min(1, (now - began) / duration);
@@ -499,12 +505,20 @@
       nextBtn.disabled = best === cards.length - 1;
     }
 
+    // rAF for smoothness, timeout as a backstop (rAF is paused in hidden tabs).
     var ticking = false;
-    track.addEventListener('scroll', function () {
+    function schedule() {
       if (ticking) return;
       ticking = true;
-      requestAnimationFrame(function () { update(); ticking = false; });
-    }, { passive: true });
+      var run = function () {
+        if (!ticking) return;
+        ticking = false;
+        update();
+      };
+      requestAnimationFrame(run);
+      setTimeout(run, 150);
+    }
+    track.addEventListener('scroll', schedule, { passive: true });
     window.addEventListener('resize', update);
 
     cards.forEach(function (card, i) {
