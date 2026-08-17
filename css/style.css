@@ -51,8 +51,9 @@ h1, h2, h3 { font-family: "Fraunces", Georgia, serif; font-weight: 600; line-hei
 h2 { font-size: 1.9rem; margin: 0 0 1.6rem; }
 h2.sub { margin-top: 3rem; }
 h3 { font-size: 1.25rem; margin-bottom: 0.4rem; }
-.wrap { max-width: 1160px; margin: 0 auto; padding: 0 1.4rem; }
-main section { padding: 4.5rem 0 1rem; }
+/* padding-inline only, so a section that is also .wrap keeps its vertical rhythm */
+.wrap { max-width: 1160px; margin: 0 auto; padding-inline: 1.4rem; }
+main section { padding: 4.5rem 0 1.5rem; }
 
 /* ===== header ===== */
 .site-header {
@@ -177,10 +178,7 @@ main section { padding: 4.5rem 0 1rem; }
 .tile[aria-selected="false"] { filter: opacity(0.75); }
 .tile:hover { filter: none; border-color: var(--accent); }
 .tile:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-.shelf-line {
-  height: 3px; border-radius: 3px; background: var(--line);
-  max-width: 1160px; margin: 0 auto 1.8rem;
-}
+.panels { margin-top: 1.8rem; }
 
 /* enhanced: tiles sit on the shelf, sized by distance from the centre */
 .stage.is-enhanced .shelf {
@@ -201,20 +199,33 @@ main section { padding: 4.5rem 0 1rem; }
   padding: 2.2rem 2.5rem;
   margin-top: 0.8rem;
 }
-.stage.is-enhanced .panels .project { display: none; }
-.stage.is-enhanced .panels .project.is-shown {
-  display: grid; animation: panel-in 0.45s ease both;
+.stage.is-enhanced .panels > * { display: none; }
+.stage.is-enhanced .panels > .is-shown {
+  display: block; animation: panel-in 0.45s ease both;
 }
-.stage.is-enhanced .panels .project.no-shots.is-shown { display: block; }
+.stage.is-enhanced .panels > .project.is-shown { display: grid; }
+.stage.is-enhanced .panels > .project.no-shots.is-shown { display: block; }
 .panels .project { border-top: none; padding-top: 0; }
+/* research cards already sit inside the panel frame */
+.stage.is-enhanced .panels > .card {
+  background: none; border: none; border-radius: 0; padding: 0;
+}
+.panels > .card p { font-size: 1rem; }
+.panels > .card p + p { margin-top: 0.8rem; }
+.panels > .card .tags { margin-top: 0.6rem; }
 @keyframes panel-in {
   from { opacity: 0; transform: translateY(12px); }
   to { opacity: 1; transform: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   .tile { transition: none; }
-  .stage.is-enhanced .panels .project.is-shown { animation: none; }
+  .stage.is-enhanced .panels > .is-shown { animation: none; }
 }
+
+/* text-only tiles (research) */
+.tile-text { justify-content: center; gap: 0.5rem; }
+.tile-text .tile-name { font-family: "Fraunces", Georgia, serif; font-size: 1.25rem; font-weight: 600; }
+.tile-sub { color: var(--ink-soft); font-size: 0.78rem; line-height: 1.3; }
 
 /* ===== research cards ===== */
 .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; }
@@ -247,8 +258,7 @@ main section { padding: 4.5rem 0 1rem; }
 .skills dd { color: var(--ink-soft); }
 
 /* ===== beyond / prose ===== */
-.prose { max-width: 66ch; color: var(--ink-soft); }
-#beyond h2, #beyond .prose { max-width: 36rem; margin-left: auto; margin-right: auto; }
+.prose { color: var(--ink-soft); }
 
 /* ===== footer ===== */
 footer { margin-top: 4.5rem; padding: 4rem 0 2.5rem; background: var(--bg-raised); border-top: 1px solid var(--line); text-align: center; }

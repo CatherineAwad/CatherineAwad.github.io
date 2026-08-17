@@ -81,7 +81,7 @@
           <span class="tile-name">IncidentAid</span>
         </button>
         <button class="tile" type="button" role="tab" id="tab-ha" aria-controls="panel-ha" aria-selected="false">
-          <img src="assets/logos/ha.svg" alt="" width="130" height="130">
+          <img src="assets/logos/ha-mark.svg" alt="" width="130" height="130">
           <span class="tile-name">Hydration Automation</span>
         </button>
         <button class="tile" type="button" role="tab" id="tab-beyondlist" aria-controls="panel-beyondlist" aria-selected="false">
@@ -93,7 +93,6 @@
           <span class="tile-name">Frona</span>
         </button>
       </div>
-      <div class="shelf-line" aria-hidden="true"></div>
       <div class="panels wrap" id="projects-panels">
 
     <article class="project" id="panel-volunteer" role="tabpanel" aria-labelledby="tab-volunteer">
@@ -234,11 +233,34 @@
   </section>
 
   <!-- ============ RESEARCH ============ -->
-  <section id="research" class="wrap">
-    <h2>Research</h2>
-    <div class="card-grid stack">
+  <section id="research">
+    <div class="wrap">
+      <h2>Research</h2>
+      <p class="section-hint">Hover a topic — or scroll across the row — to bring it into focus.</p>
+    </div>
 
-      <div class="card">
+    <div class="stage" id="research-stage">
+      <div class="shelf" role="tablist" aria-label="Research projects">
+        <button class="tile tile-text" type="button" role="tab" id="rtab-medicalqa" aria-controls="rpanel-medicalqa" aria-selected="true">
+          <span class="tile-name">MedicalQA</span>
+          <span class="tile-sub">Caregiver QA generation</span>
+        </button>
+        <button class="tile tile-text" type="button" role="tab" id="rtab-mcminer" aria-controls="rpanel-mcminer" aria-selected="false">
+          <span class="tile-name">McMiner</span>
+          <span class="tile-sub">LLM code tutoring</span>
+        </button>
+        <button class="tile tile-text" type="button" role="tab" id="rtab-anomaly" aria-controls="rpanel-anomaly" aria-selected="false">
+          <span class="tile-name">Anomaly Detection</span>
+          <span class="tile-sub">Vision-language models</span>
+        </button>
+        <button class="tile tile-text" type="button" role="tab" id="rtab-tts" aria-controls="rpanel-tts" aria-selected="false">
+          <span class="tile-name">TTS &amp; Voice Imitation</span>
+          <span class="tile-sub">Arabic speech synthesis</span>
+        </button>
+      </div>
+      <div class="panels wrap">
+
+      <div class="card" id="rpanel-medicalqa" role="tabpanel" aria-labelledby="rtab-medicalqa">
         <h3>MedicalQA — Caregiver QA Generation &amp; Evaluation</h3>
         <p class="meta">AIM Lab, Santa Clara University · ongoing</p>
         <p class="tags"><span>LLMs</span><span>RAG</span><span>React/Vite</span><span>Supabase</span></p>
@@ -261,7 +283,7 @@
         </p>
       </div>
 
-      <div class="card">
+      <div class="card" id="rpanel-mcminer" role="tabpanel" aria-labelledby="rtab-mcminer">
         <h3>McMiner — Misconception Mining for LLM Code Tutoring</h3>
         <p class="meta">Started as a graduate course project · continuing as directed research with the AIM Lab, Santa Clara University</p>
         <p class="tags"><span>LLMs</span><span>pass@k</span><span>EvoCodeBench</span><span>Python</span></p>
@@ -292,7 +314,7 @@
         </p>
       </div>
 
-      <div class="card">
+      <div class="card" id="rpanel-anomaly" role="tabpanel" aria-labelledby="rtab-anomaly">
         <h3>Medical Anomaly Detection with Vision-Language Models</h3>
         <p class="meta">Four-person team project</p>
         <p class="tags"><span>CLIP</span><span>MVFA</span><span>LoRA</span><span>PyTorch</span></p>
@@ -327,7 +349,7 @@
         <p class="repo-link"><a href="assets/clip-anomaly-report.pdf" rel="noopener">Read the report (PDF) →</a></p>
       </div>
 
-      <div class="card">
+      <div class="card" id="rpanel-tts" role="tabpanel" aria-labelledby="rtab-tts">
         <h3>TTS &amp; Voice Imitation</h3>
         <p class="meta">B.S. graduation thesis (team of six), Alexandria University · 2019</p>
         <p class="tags"><span>Tacotron&nbsp;2</span><span>Speech Synthesis</span><span>Deep Learning</span></p>
@@ -350,6 +372,7 @@
         </p>
       </div>
 
+      </div>
     </div>
   </section>
 
@@ -445,11 +468,14 @@
 <script>
   // Projects shelf: tiles rotate, the centred one owns the detail panel below.
   (function () {
-    var stage = document.getElementById('projects-stage');
-    if (!stage) return;
-    var shelf = document.getElementById('projects-shelf');
+    [].slice.call(document.querySelectorAll('.stage')).forEach(initShelf);
+
+    function initShelf(stage) {
+    var shelf = stage.querySelector('.shelf');
+    if (!shelf) return;
     var tiles = [].slice.call(shelf.querySelectorAll('.tile'));
-    var panels = [].slice.call(document.querySelectorAll('#projects-panels .project'));
+    var panelWrap = stage.querySelector('.panels');
+    var panels = panelWrap ? [].slice.call(panelWrap.children) : [];
     var n = tiles.length;
     if (!n || panels.length !== n) return;
 
@@ -546,6 +572,7 @@
 
     window.addEventListener('resize', place);
     place();
+    }
   })();
 
   (function () {
