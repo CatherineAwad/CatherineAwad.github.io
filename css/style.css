@@ -820,8 +820,7 @@ footer .cta-row { justify-content: center; margin-top: 1.4rem; }
 @media (max-width: 760px) {
   .project { grid-template-columns: 1fr; gap: 1.2rem; }
   .stage.is-enhanced .panels .project.is-shown { grid-template-columns: 1fr; }
-  .timeline li, .skills div { grid-template-columns: 1fr; gap: 0.2rem; }
-  .nav-links { gap: 0.9rem; }
-  .nav-links a:nth-child(n+3) { display: none; }
-  .theme-toggle { display: inline-flex; }
+  .nav-links { gap: 0.6rem; }
+  .nav-links a { display: none !important; }
+  .nav-links a.nav-resume { display: inline-flex !important; }
 }
