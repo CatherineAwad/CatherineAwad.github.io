@@ -1,30 +1,5 @@
 /* ===== tokens ===== */
 :root {
-  --bg: #faf8f5;
-  --bg-raised: #ffffff;
-  --ink: #24211c;
-  --ink-soft: #5c564c;
-  --line: #e6e1d8;
-  --accent: #0e7490;
-  --accent-ink: #ffffff;
-  --tag-bg: #eee9df;
-  --shadow: 0 10px 30px rgba(36, 33, 28, 0.10);
-  --radius: 14px;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #171613;
-    --bg-raised: #1f1d1a;
-    --ink: #ece8e1;
-    --ink-soft: #a8a196;
-    --line: #34312b;
-    --accent: #38bdd8;
-    --accent-ink: #10222a;
-    --tag-bg: #2a2723;
-    --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
-  }
-}
-:root[data-theme="dark"] {
   --bg: #171613;
   --bg-raised: #1f1d1a;
   --ink: #ece8e1;
@@ -34,6 +9,7 @@
   --accent-ink: #10222a;
   --tag-bg: #2a2723;
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  --radius: 14px;
 }
 
 /* ===== base ===== */
@@ -76,25 +52,7 @@ main section { padding: 4.5rem 0 1.5rem; }
 .nav-links a.nav-resume,
 .nav-links a.nav-resume:hover { color: var(--accent-ink); font-weight: 600; text-decoration: none; }
 
-/* theme toggle */
-.theme-toggle {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 2rem; height: 2rem; padding: 0;
-  border: 1px solid var(--line); border-radius: 999px;
-  background: var(--bg-raised); color: var(--ink-soft); cursor: pointer;
-}
-.theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
-/* light theme shows the moon (switch to dark); dark theme shows the sun */
-.theme-toggle .icon-sun { display: none; }
-.theme-toggle .icon-moon { display: block; }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .theme-toggle .icon-sun { display: block; }
-  :root:not([data-theme="light"]) .theme-toggle .icon-moon { display: none; }
-}
-:root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
-:root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
-:root[data-theme="light"] .theme-toggle .icon-sun { display: none; }
-:root[data-theme="light"] .theme-toggle .icon-moon { display: block; }
+
 
 /* ===== hero ===== */
 .hero {
