@@ -133,7 +133,7 @@
         <p class="tags"><span>Flutter</span><span>Firebase</span><span>Riverpod</span><span>Google Maps</span><span>BLE</span></p>
         <p>
           An incident-reporting and response-coordination app for firefighters, built at
-          Santa Clara University's EPIC Lab — I'm its primary developer.
+          Santa Clara University's EPIC Lab — primary lead developer.
         </p>
         <p>
           Rearchitected the app end to end: Riverpod state management, a repository-pattern
@@ -164,19 +164,16 @@
         <p class="tags"><span>Flutter</span><span>Node.js/Express</span><span>Arduino&nbsp;C++</span><span>LoRa</span><span>NFC</span></p>
         <p>
           An IoT platform for real-time monitoring of agricultural hydration systems,
-          built at the EPIC Lab — I work across every tier of the stack.
+          built at Santa Clara University's EPIC Lab.
         </p>
         <p>
-          I built the cross-platform Flutter app (NFC- and QR-based device onboarding,
-          real-time sensor dashboards, localization, CI), wrote the embedded firmware
-          (Arduino/C++ on SAMD21 with LoRa: ACK-gated transmission with offline queueing,
-          NTP-disciplined clocks, OTA-refreshed device whitelists, battery telemetry), and
-          co-developed the Express backend with server-side timestamping, deduplication, and
-          passwordless magic-link sign-in.
+          Full-stack development across every tier: cross-platform Flutter app (NFC and QR device
+          onboarding, real-time sensor dashboards, localization), embedded firmware (Arduino/C++
+          on SAMD21 with LoRa: ACK-gated queueing, NTP clocks, telemetry), Express backend with
+          magic-link authentication, and the responsive public website localized in two languages with light/dark themes.
         </p>
-        <p>
-          I also built the project's public website, hydrationautomation.com — responsive,
-          localized in two languages, with light and dark themes.
+        <p class="repo-link">
+          <a href="https://hydrationautomation.com" rel="noopener" target="_blank">Visit hydrationautomation.com →</a>
         </p>
       </div>
       <div class="shots">
@@ -285,33 +282,46 @@
 
       <div class="card" id="rpanel-mcminer" role="tabpanel" aria-labelledby="rtab-mcminer">
         <h3>McMiner — Misconception Mining for LLM Code Tutoring</h3>
-        <p class="meta">Started as a graduate course project · continuing as directed research with the AIM Lab, Santa Clara University</p>
-        <p class="tags"><span>LLMs</span><span>pass@k</span><span>EvoCodeBench</span><span>Python</span></p>
+        <p class="meta">Graduate research with the AIM Lab, Santa Clara University · Catherine Awad, Ruiwen Guan, Hanieh Hedayati (Advisor: Dr. Oana Ignat)</p>
+        <p class="tags"><span>LLMs</span><span>Misconception Mining</span><span>pass@k</span><span>EvoCodeBench</span><span>Python</span></p>
         <p>
-          When an LLM tutors a weaker model (or a student) on a coding task, generic hints
-          waste rounds. McMiner is a "misconception-in-the-loop" tutoring method built on
-          top of TRAVER: the tutor first poses a diagnostic completion, mines the student's
-          specific misconception from the attempt, and injects that misconception into the
-          next tutoring round — so every hint targets what the student actually got wrong.
+          Traditional LLM code tutors suffer from over-tutoring (giving away answers too early)
+          or vague hinting that wastes rounds. McMiner addresses this by introducing an active,
+          "misconception-in-the-loop" diagnostic framework: the tutor poses diagnostic code
+          scenarios, mines the student's specific underlying error pattern, and batch-injects
+          the misconception into subsequent prompt context so every hint directly targets the root flaw.
         </p>
         <p>
-          We evaluate with pass@1/5/10 on the EvoCodeBench dataset, broken down by task
-          difficulty and tutoring round, baseline versus McMiner. Because multi-round
-          evaluation over a full benchmark takes many GPU-hours, I built a fault-tolerant
-          evaluation harness on GPU pods that auto-pauses and resumes across multi-hour
-          model-server outages instead of losing runs. I also built the demo web app below:
-          it replays recorded tutoring dialogues side by side (baseline vs. McMiner, by task
-          and student level), and has a semi-live mode that generates fresh sessions against
-          real model APIs in parallel panes, using visitor-supplied API keys that never leave
-          the browser.
+          Evaluated using pass@1/5/10 across task difficulty tiers on the EvoCodeBench benchmark,
+          McMiner achieved significant accuracy gains — boosting Easy tasks (+9.4% pass@1) and
+          High-level student models (+5.2% pass@5) while reducing overall hint rounds needed to reach correct solutions.
+        </p>
+        <p>
+          To run multi-round benchmark evaluations, a fault-tolerant GPU harness was built with auto-pause/resume controls across server outages. An interactive side-by-side dialogue replay web app was also developed, featuring a live mode for running fresh sessions against real LLM APIs.
         </p>
         <p class="repo-link">
-          <a href="https://mcminer-coding-tutor.netlify.app" rel="noopener">Live demo — baseline vs. McMiner dialogues →</a><br>
-          <a href="https://github.com/SCU-CSEN346/Tutor-Agents" rel="noopener">Code &amp; full write-up on GitHub →</a><br>
-          <a href="https://github.com/SCU-CSEN346/Tutor-Agents/blob/main/paper/Mcminer-coding-tutor.pdf" rel="noopener">Paper (PDF) →</a><br>
-          <a href="https://github.com/SCU-CSEN346/Tutor-Agents/blob/main/paper/Bridging%20Misconception%20Detection%20and%20Dialogue-Based%20Tutoring%20for%20Programming%20Education.pdf" rel="noopener">Presentation (PDF) →</a><br>
-          <a href="https://github.com/SCU-CSEN346/Tutor-Agents/blob/main/paper/poster%20mcminer-tutor.pdf" rel="noopener">Poster (PDF) →</a>
+          <a href="https://mcminer-coding-tutor.netlify.app" rel="noopener" target="_blank">Live demo — baseline vs. McMiner dialogues →</a><br>
+          <a href="assets/mcminer-poster.pdf" rel="noopener" target="_blank">Open poster (PDF) →</a><br>
+          <a href="https://github.com/SCU-CSEN346/Tutor-Agents" rel="noopener" target="_blank">Code &amp; full write-up on GitHub →</a>
         </p>
+        <details class="embed-details">
+          <summary class="embed-summary">
+            <span>Research Poster (PDF)</span>
+            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </summary>
+          <div class="embed-container">
+            <iframe src="assets/mcminer-poster.pdf" width="100%" height="560" loading="lazy" title="McMiner Research Poster PDF"></iframe>
+          </div>
+        </details>
+        <details class="embed-details">
+          <summary class="embed-summary">
+            <span>Interactive Live Demo &amp; Dialogue Replay</span>
+            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </summary>
+          <div class="embed-container">
+            <iframe src="https://mcminer-coding-tutor.netlify.app" width="100%" height="520" loading="lazy" title="McMiner Coding Tutor Live Demo"></iframe>
+          </div>
+        </details>
       </div>
 
       <div class="card" id="rpanel-anomaly" role="tabpanel" aria-labelledby="rtab-anomaly">
@@ -346,7 +356,15 @@
           HPC cluster, so there is no public repo; the report below holds the full
           experiment matrix.
         </p>
-        <p class="repo-link"><a href="assets/clip-anomaly-report.pdf" rel="noopener">Read the report (PDF) →</a></p>
+        <details class="embed-details">
+          <summary class="embed-summary">
+            <span>Full Research Report (PDF)</span>
+            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </summary>
+          <div class="embed-container">
+            <iframe src="assets/clip-anomaly-report.pdf" width="100%" height="540" loading="lazy" title="Medical Anomaly Detection Research Report PDF"></iframe>
+          </div>
+        </details>
       </div>
 
       <div class="card" id="rpanel-tts" role="tabpanel" aria-labelledby="rtab-tts">
@@ -363,13 +381,26 @@
         <p>
           Beyond the English models, we added an Egyptian-dialect Arabic dataset and
           fine-tuned the system to generate realistic Arabic speech — a language where
-          dialectal TTS training resources are scarce. The slides below link to generated
-          voice samples you can listen to.
+          dialectal TTS training resources are scarce. Expand below to view presentation slides and thesis report.
         </p>
-        <p class="repo-link">
-          <a href="assets/tts-voice-imitation-thesis.pdf" rel="noopener">Read the thesis (PDF, 9.5&nbsp;MB) →</a><br>
-          <a href="https://docs.google.com/presentation/d/1iJ-YoK-MeUG0BKsTJry_cjG-LgUnQ9Eslm_7-5JDA8Q/" rel="noopener">Slides with voice samples →</a>
-        </p>
+        <details class="embed-details">
+          <summary class="embed-summary">
+            <span>Presentation Slides &amp; Voice Samples</span>
+            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </summary>
+          <div class="embed-container">
+            <iframe src="https://docs.google.com/presentation/d/1iJ-YoK-MeUG0BKsTJry_cjG-LgUnQ9Eslm_7-5JDA8Q/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="450" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" loading="lazy" title="TTS & Voice Imitation Slides"></iframe>
+          </div>
+        </details>
+        <details class="embed-details">
+          <summary class="embed-summary">
+            <span>Graduation Thesis (PDF)</span>
+            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </summary>
+          <div class="embed-container">
+            <iframe src="assets/tts-voice-imitation-thesis.pdf" width="100%" height="540" loading="lazy" title="TTS & Voice Imitation Graduation Thesis PDF"></iframe>
+          </div>
+        </details>
       </div>
 
       </div>
@@ -546,13 +577,26 @@
       tile.addEventListener('focus', function () { setFocus(i); });
     });
 
+    var wheelLockUntil = 0;
+    var wheelGestureActive = false;
+    var wheelTimer = 0;
+
     shelf.addEventListener('wheel', function (e) {
       var delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
-      if (!delta) return;
+      if (Math.abs(delta) < 4) return;
       e.preventDefault();
+
+      clearTimeout(wheelTimer);
+      wheelTimer = setTimeout(function () {
+        wheelGestureActive = false;
+      }, 450);
+
       var now = Date.now();
-      if (now < wheelLockUntil) return;
-      wheelLockUntil = now + 340;
+      if (wheelGestureActive || now < wheelLockUntil) return;
+
+      wheelGestureActive = true;
+      wheelLockUntil = now + 650;
+      hoverLockUntil = now + 750;
       setFocus(focus + (delta > 0 ? 1 : -1));
     }, { passive: false });
 
