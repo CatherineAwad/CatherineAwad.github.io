@@ -121,6 +121,7 @@
     <article class="project" id="panel-volunteer" role="tabpanel" aria-labelledby="tab-volunteer">
       <div class="project-info">
         <h3>Volunteer Service Management App</h3>
+        <p class="meta">Solo Project · Production App Live on Google Play</p>
         <p class="tags"><span>Flutter</span><span>Firebase</span><span>Riverpod</span><span>Cloud Functions</span></p>
         <p>
           Built solo, from scratch, for a volunteer organization in Egypt: a bilingual
@@ -153,6 +154,7 @@
     <article class="project" id="panel-incidentaid" role="tabpanel" aria-labelledby="tab-incidentaid">
       <div class="project-info">
         <h3>IncidentAid</h3>
+        <p class="meta">EPIC Lab, Santa Clara University · Emergency Response Platform</p>
         <p class="tags"><span>Flutter</span><span>Firebase</span><span>Riverpod</span><span>Google Maps</span><span>BLE</span></p>
         <p>
           An incident-reporting and response-coordination app for firefighters, built at
@@ -185,6 +187,7 @@
     <article class="project" id="panel-ha" role="tabpanel" aria-labelledby="tab-ha">
       <div class="project-info">
         <h3>Hydration Automation</h3>
+        <p class="meta">EPIC Lab, Santa Clara University · Agricultural IoT Platform</p>
         <p class="tags"><span>Flutter</span><span>Node.js/Express</span><span>Arduino&nbsp;C++</span><span>LoRa</span><span>NFC</span></p>
         <p>
           An IoT platform for real-time monitoring of agricultural hydration systems,
@@ -221,13 +224,18 @@
     <article class="project" id="panel-beyondlist" role="tabpanel" aria-labelledby="tab-beyondlist">
       <div class="project-info">
         <h3>BeyondList</h3>
-        <p class="tags"><span>Flutter</span><span>Firebase</span><span>Spring Boot</span><span>PostgreSQL</span></p>
+        <p class="meta">Personal Project · Real-Time Collaborative App</p>
+        <p class="tags"><span>Flutter</span><span>Firebase</span><span>Spring Boot</span><span>OAuth2/JWT</span><span>PostgreSQL</span></p>
         <p>
-          A real-time collaborative shopping-list and expense app for roommates and family —
-          deliberately built twice to learn two stacks: an original Flutter + Firebase version,
-          then a rewrite with a Java Spring Boot backend (OAuth2/JWT, JPA, PostgreSQL).
+          A real-time collaborative shopping-list and expense management application for households and families — engineered across two distinct backend architectures to compare serverless cloud sync against self-hosted Java microservices.
         </p>
-        <p class="repo-link"><a href="https://github.com/c-awad/beyond_list" rel="noopener">View source on GitHub →</a></p>
+        <p>
+          Features real-time item check-offs, collaborative household list sharing, expense splitting, and offline-first local caching to guarantee instant UI responsiveness even without active network access.
+        </p>
+        <p>
+          <strong>Dual-Stack Architecture:</strong> Built initially as a serverless Flutter + Firebase architecture using Firestore real-time listeners, then re-architected with a custom Java <strong>Spring Boot REST API</strong> backed by <strong>Spring Security (OAuth2 / JWT authentication)</strong>, Spring Data JPA, and a <strong>PostgreSQL</strong> relational database.
+        </p>
+        <p class="repo-link"><a href="https://github.com/c-awad/beyond_list" rel="noopener" target="_blank">View source on GitHub →</a></p>
       </div>
       <div class="shots">
         <img src="assets/beyondlist/04_home.png" alt="BeyondList home screen with shopping lists" loading="lazy">
@@ -237,15 +245,27 @@
       </div>
     </article>
 
-    <article class="project no-shots" id="panel-frona" role="tabpanel" aria-labelledby="tab-frona">
+    <article class="project" id="panel-frona" role="tabpanel" aria-labelledby="tab-frona">
       <div class="project-info">
-        <h3>Frona</h3>
-        <p class="tags"><span>Flutter</span><span>Scala</span><span>gRPC</span><span>AWS</span><span>Docker</span></p>
+        <h3>Frona — Diet &amp; Fitness Platform</h3>
+        <p class="meta">Frona Tech Startup · Released on App Store &amp; Google Play</p>
+        <p class="tags"><span>Flutter</span><span>Scala</span><span>gRPC</span><span>AWS</span><span>Docker</span><span>PostgreSQL</span></p>
         <p>
-          Co-founded Frona Tech and led a team of four engineers building a cross-platform
-          diet and fitness app. Took the product from concept to release on the App Store
-          and Google Play. The company has since wound down.
+          Co-founded Frona Tech and served as Lead Software Engineer, taking a full-stack, cross-platform diet and fitness platform from initial architecture to production releases on both the <strong>App Store</strong> and <strong>Google Play</strong>.
         </p>
+        <p>
+          <strong>Key Features:</strong> Custom diet &amp; macro engine (Keto/Paleo with barcode scanning), real-time workout trainer mode (supersets, rest timers &amp; lift progression graphs), and influencer plan sharing.
+        </p>
+        <p>
+          <strong>Architecture:</strong> Cross-platform <strong>Flutter</strong> mobile clients backed by <strong>Scala microservices</strong> over high-performance <strong>gRPC APIs</strong>, containerized with <strong>Docker</strong> on <strong>AWS</strong>.
+        </p>
+      </div>
+      <div class="shots">
+        <img src="assets/frona/01_onboarding.png" alt="Frona app onboarding screen" loading="lazy">
+        <img src="assets/frona/02_home.png" alt="Frona app home dashboard" loading="lazy">
+        <img src="assets/frona/03_tracker.png" alt="Frona app fitness tracking" loading="lazy">
+        <img src="assets/frona/04_analytics.png" alt="Frona app activity analytics" loading="lazy">
+        <img src="assets/frona/05_profile.png" alt="Frona app user profile" loading="lazy">
       </div>
     </article>
 
