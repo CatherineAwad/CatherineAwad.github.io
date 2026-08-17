@@ -73,23 +73,23 @@
     <div class="stage" id="projects-stage">
       <div class="shelf" id="projects-shelf" role="tablist" aria-label="Projects">
         <button class="tile" type="button" role="tab" id="tab-volunteer" aria-controls="panel-volunteer" aria-selected="true">
-          <img src="assets/logos/volunteer.png" alt="" width="56" height="56">
+          <img src="assets/logos/volunteer.svg" alt="" width="130" height="130">
           <span class="tile-name">Volunteer Service App</span>
         </button>
         <button class="tile" type="button" role="tab" id="tab-incidentaid" aria-controls="panel-incidentaid" aria-selected="false">
-          <img src="assets/logos/incidentaid.png" alt="" width="56" height="56">
+          <img src="assets/logos/incidentaid.svg" alt="" width="130" height="130">
           <span class="tile-name">IncidentAid</span>
         </button>
         <button class="tile" type="button" role="tab" id="tab-ha" aria-controls="panel-ha" aria-selected="false">
-          <img src="assets/logos/ha.png" alt="" width="56" height="56">
+          <img src="assets/logos/ha.svg" alt="" width="130" height="130">
           <span class="tile-name">Hydration Automation</span>
         </button>
         <button class="tile" type="button" role="tab" id="tab-beyondlist" aria-controls="panel-beyondlist" aria-selected="false">
-          <img src="assets/logos/beyondlist.png" alt="" width="56" height="56">
+          <img src="assets/logos/beyondlist.svg" alt="" width="130" height="130">
           <span class="tile-name">BeyondList</span>
         </button>
         <button class="tile" type="button" role="tab" id="tab-frona" aria-controls="panel-frona" aria-selected="false">
-          <img src="assets/logos/frona.png" alt="" width="56" height="56">
+          <img src="assets/logos/frona.svg" alt="" width="130" height="130">
           <span class="tile-name">Frona</span>
         </button>
       </div>
@@ -462,15 +462,16 @@
     var wheelLockUntil = 0;
 
     function place() {
-      var w = tiles[0].offsetWidth || 150;
+      var w = tiles[0].offsetWidth || 190;
       tiles.forEach(function (tile, i) {
         var rel = (i - focus) % n;
         if (rel > n / 2) rel -= n;
         if (rel < -n / 2) rel += n;
         var dist = Math.abs(rel);
         var dir = rel < 0 ? -1 : 1;
-        var scale = dist === 0 ? 1 : (dist === 1 ? 0.76 : 0.56);
-        var x = dist === 0 ? 0 : dir * w * (dist === 1 ? 0.92 : 1.6);
+        var scale = dist === 0 ? 1 : (dist === 1 ? 0.82 : 0.64);
+        var x = dist === 0 ? 0 : dir * w * (dist === 1 ? 0.95 : 1.65);
+        var y = dist === 0 ? 0 : (dist === 1 ? 16 : 32);
         var far = dist > 2;
 
         // A tile wrapping from one end to the other should not fly across.
@@ -480,13 +481,13 @@
           tile.style.opacity = '0';
           (function (el, o) {
             setTimeout(function () { el.style.transition = ''; el.style.opacity = o; }, 30);
-          })(tile, far ? '0' : (dist === 0 ? '1' : dist === 1 ? '0.9' : '0.72'));
+          })(tile, far ? '0' : (dist === 0 ? '1' : dist === 1 ? '0.88' : '0.65'));
         } else {
-          tile.style.opacity = far ? '0' : (dist === 0 ? '1' : dist === 1 ? '0.9' : '0.72');
+          tile.style.opacity = far ? '0' : (dist === 0 ? '1' : dist === 1 ? '0.88' : '0.65');
         }
         prevRel[i] = rel;
 
-        tile.style.transform = 'translateX(' + x + 'px) scale(' + scale + ')';
+        tile.style.transform = 'translate3d(' + x + 'px, ' + y + 'px, 0) scale(' + scale + ')';
         tile.style.zIndex = String(10 - dist);
         tile.style.pointerEvents = far ? 'none' : 'auto';
         tile.setAttribute('aria-selected', i === focus ? 'true' : 'false');
@@ -504,16 +505,16 @@
 
     tiles.forEach(function (tile, i) {
       tile.addEventListener('click', function () {
-        hoverLockUntil = Date.now() + 500;
+        hoverLockUntil = Date.now() + 600;
         setFocus(i);
       });
       tile.addEventListener('mouseenter', function () {
         if (Date.now() < hoverLockUntil) return;
         clearTimeout(hoverTimer);
         hoverTimer = setTimeout(function () {
-          hoverLockUntil = Date.now() + 500; // let the rotation settle before re-reacting
+          hoverLockUntil = Date.now() + 700; // deliberate delay before rotating on hover
           setFocus(i);
-        }, 140);
+        }, 450);
       });
       tile.addEventListener('mouseleave', function () { clearTimeout(hoverTimer); });
       tile.addEventListener('focus', function () { setFocus(i); });

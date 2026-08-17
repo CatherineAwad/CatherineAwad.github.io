@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <!-- Hydration Automation (HA) Geometric Monogram -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Left Crescent Hydro Arc -->
+    <path d="M 28 64 C 16 54 16 38 28 28 C 36 21 44 24 44 24 C 34 29 32 42 40 50 C 44 54 48 54 48 54 C 48 54 38 68 28 64 Z" 
+          fill="#0284c7" />
+    
+    <!-- Central Geometric Spire 'A' -->
+    <path d="M 50 16 L 66 74 H 56 L 50 50 L 44 74 H 34 Z" fill="#0284c7" />
+    <!-- 'A' Inner Triangular Cutout -->
+    <polygon points="50,28 44,44 56,44" fill="none" stroke="#0284c7" stroke-width="3"/>
+    
+    <!-- Right Pillar 'H' -->
+    <path d="M 68 24 V 74 H 78 V 24 Z" fill="#0284c7" />
+    
+    <!-- Horizontal Connecting Crossbar -->
+    <rect x="42" y="44" width="30" height="7" fill="#0284c7" />
+  </g>
+</svg>

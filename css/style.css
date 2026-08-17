@@ -143,29 +143,43 @@ main section { padding: 4.5rem 0 1rem; }
 
 /* ===== projects shelf ===== */
 .section-hint { color: var(--ink-soft); font-size: 0.92rem; margin: -1.1rem 0 1.6rem; }
-.stage { --tile-w: 158px; --tile-h: 178px; }
+.stage { --tile-w: 215px; --tile-h: 255px; }
 
 /* no-JS fallback: a plain row of tiles, every panel visible */
 .shelf { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
 .tile {
-  display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 0.65rem;
-  width: var(--tile-w); height: var(--tile-h); padding: 1.1rem 0.85rem 1rem;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.95rem;
+  width: var(--tile-w); height: var(--tile-h); padding: 1.5rem 1rem 1.3rem;
   background: var(--bg-raised); border: 1px solid var(--line);
-  border-radius: 16px 16px 0 0; box-shadow: var(--shadow);
+  border-radius: 20px 20px 0 0; box-shadow: var(--shadow);
   color: var(--ink); cursor: pointer; text-align: center;
   transform-origin: bottom center;
-  transition: transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1), opacity 0.4s ease,
-              border-color 0.3s ease, filter 0.4s ease;
+  transition: transform 0.48s cubic-bezier(0.22, 0.61, 0.36, 1), opacity 0.4s ease,
+              border-color 0.3s ease, filter 0.4s ease, box-shadow 0.3s ease;
 }
-.tile img { width: 56px; height: 56px; object-fit: contain; }
-.tile-name { font-family: "Inter", sans-serif; font-size: 0.84rem; font-weight: 600; line-height: 1.25; }
-.tile[aria-selected="true"] { border-color: var(--accent); }
-.tile[aria-selected="false"] { filter: grayscale(0.4); }
-.tile:hover { filter: none; }
+.tile img {
+  width: 130px; height: 130px; object-fit: contain;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.tile-name { font-family: "Inter", sans-serif; font-size: 0.94rem; font-weight: 600; line-height: 1.25; }
+.tile[aria-selected="true"] {
+  border-color: var(--accent);
+  box-shadow: 0 16px 40px color-mix(in srgb, var(--accent) 22%, transparent);
+}
+.tile[aria-selected="true"] img {
+  filter: drop-shadow(0 8px 18px color-mix(in srgb, var(--accent) 40%, transparent));
+  transform: scale(1.08);
+}
+.tile[aria-selected="false"] { filter: opacity(0.75); }
+.tile:hover { filter: none; border-color: var(--accent); }
 .tile:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .shelf-line {
   height: 3px; border-radius: 3px; background: var(--line);
-  max-width: 1160px; margin: 0 auto 2.2rem;
+  max-width: 1160px; margin: 0 auto 1.8rem;
 }
 
 /* enhanced: tiles sit on the shelf, sized by distance from the centre */
@@ -177,6 +191,16 @@ main section { padding: 4.5rem 0 1rem; }
   position: absolute; left: 50%; bottom: 0;
   margin-left: calc(var(--tile-w) / -2);
 }
+
+/* Expanded Detail Container ("Blue Box" concept: unified card for in-focus project) */
+.stage.is-enhanced .panels {
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2.2rem 2.5rem;
+  margin-top: 0.8rem;
+}
 .stage.is-enhanced .panels .project { display: none; }
 .stage.is-enhanced .panels .project.is-shown {
   display: grid; animation: panel-in 0.45s ease both;
@@ -184,7 +208,7 @@ main section { padding: 4.5rem 0 1rem; }
 .stage.is-enhanced .panels .project.no-shots.is-shown { display: block; }
 .panels .project { border-top: none; padding-top: 0; }
 @keyframes panel-in {
-  from { opacity: 0; transform: translateY(10px); }
+  from { opacity: 0; transform: translateY(12px); }
   to { opacity: 1; transform: none; }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -234,14 +258,14 @@ footer .cta-row { justify-content: center; margin-top: 1.4rem; }
 
 /* ===== responsive ===== */
 @media (max-width: 900px) {
-  .stage { --tile-w: 128px; --tile-h: 150px; }
-  .tile img { width: 46px; height: 46px; }
-  .tile-name { font-size: 0.76rem; }
+  .stage { --tile-w: 160px; --tile-h: 195px; }
+  .tile img { width: 90px; height: 90px; }
+  .tile-name { font-size: 0.82rem; }
 }
 @media (max-width: 560px) {
-  .stage { --tile-w: 104px; --tile-h: 128px; }
-  .tile img { width: 38px; height: 38px; }
-  .tile-name { font-size: 0.7rem; }
+  .stage { --tile-w: 125px; --tile-h: 155px; }
+  .tile img { width: 68px; height: 68px; }
+  .tile-name { font-size: 0.74rem; }
 }
 @media (max-width: 760px) {
   .project { grid-template-columns: 1fr; gap: 1.2rem; }
