@@ -29,7 +29,14 @@
       <a href="#projects">Projects</a>
       <a href="#research">Research</a>
       <a href="#experience">Experience</a>
-      <a href="assets/Catherine_Awad_CV.pdf" download="Catherine_Awad_Resume.pdf">Resume</a>
+      <a class="btn btn-primary nav-resume" href="assets/Catherine_Awad_CV.pdf" download="Catherine_Awad_Resume.pdf">
+        <svg class="icon-download" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        Resume
+      </a>
       <a href="#contact">Contact</a>
       <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch between light and dark theme">
         <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
@@ -50,23 +57,53 @@
 
   <!-- ============ HERO ============ -->
   <section class="hero wrap">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-copy">
     <p class="kicker">Bay Area, CA</p>
-    <h1>Software engineer who ships <em>whole products</em> — from Flutter UI down to backend and firmware.</h1>
-    <p class="lede">
-      I’m Catherine, a software engineer and M.S. Computer Science &amp; Engineering student at Santa Clara University. I like building things end to end — from the first idea and UI to the backend, AI, and hardware that makes it work. I’ve built cross-platform mobile apps, full-stack systems, and machine learning projects, and I’m currently exploring how LLMs can be used to build more useful software. I tend to go wherever the problem takes me, whether that means working on the frontend, digging into a backend, training a model, or figuring out how software should interact with hardware.
-    </p>
-    <div class="cta-row">
-      <a class="btn btn-primary" href="assets/Catherine_Awad_CV.pdf" download="Catherine_Awad_Resume.pdf">
-        <svg class="icon-download" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-          <polyline points="7 10 12 15 17 10"></polyline>
-          <line x1="12" y1="15" x2="12" y2="3"></line>
-        </svg>
-        Resume
-      </a>
-      <a class="btn" href="mailto:catherinef.awad@gmail.com">Email me</a>
-      <a class="btn" href="https://www.linkedin.com/in/catherine-awad-6b9884119/" rel="noopener">LinkedIn</a>
-      <a class="btn" href="https://github.com/c-awad" rel="noopener">GitHub</a>
+    <h1 class="hero-statement">Software engineer building products <em>end to end</em>, and researching how LLMs can make software genuinely useful.</h1>
+      <div class="hero-pillars">
+        <span class="pillar-chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg> Cross-Platform Mobile</span>
+        <span class="pillar-chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg> Full-Stack &amp; Firmware</span>
+        <span class="pillar-chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> LLMs &amp; AI Research</span>
+      </div>
+      </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hv-scene" id="hv-scene">
+        <div class="hv-glow"></div>
+        <div class="hv-panel hv-back">
+          <div class="hv-chart">
+            <svg viewBox="0 0 200 90" preserveAspectRatio="none">
+              <polyline points="0,72 28,58 56,64 84,34 112,44 140,18 168,26 200,8"
+                        fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="hv-bars"><i style="--h:38%"></i><i style="--h:62%"></i><i style="--h:46%"></i><i style="--h:80%"></i><i style="--h:56%"></i></div>
+        </div>
+
+        <div class="hv-panel hv-mid">
+          <div class="hv-row"><span class="hv-dot"></span><i style="--w:72%"></i></div>
+          <div class="hv-row"><span class="hv-dot alt"></span><i style="--w:54%"></i></div>
+          <div class="hv-row"><span class="hv-dot"></span><i style="--w:86%"></i></div>
+          <div class="hv-row"><span class="hv-dot alt"></span><i style="--w:44%"></i></div>
+        </div>
+
+        <div class="hv-panel hv-front">
+          <div class="hv-gauge"><span><i style="--w:30px"></i><i style="--w:18px"></i></span></div>
+          <div class="hv-caption"><i style="--w:70%"></i><i style="--w:40%"></i></div>
+        </div>
+
+        <div class="hv-chip hv-chip-1">Flutter</div>
+        <div class="hv-chip hv-chip-2">LLMs</div>
+        <div class="hv-chip hv-chip-3">PyTorch</div>
+        <div class="hv-chip hv-chip-4">Firebase</div>
+        <div class="hv-chip hv-chip-5">Node.js</div>
+        <div class="hv-chip hv-chip-6">Arduino</div>
+        <div class="hv-chip hv-chip-7">Riverpod</div>
+        <div class="hv-chip hv-chip-8">Docker</div>
+        <div class="hv-chip hv-chip-9">RAG</div>
+      </div>
     </div>
   </section>
 
@@ -80,23 +117,23 @@
     <div class="stage" id="projects-stage">
       <div class="shelf" id="projects-shelf" role="tablist" aria-label="Projects">
         <button class="tile" type="button" role="tab" id="tab-volunteer" aria-controls="panel-volunteer" aria-selected="true">
-          <img src="assets/logos/volunteer.png" alt="" width="130" height="130">
+          <img src="assets/logos/volunteer.png" alt="" width="130" height="130" draggable="false">
           <span class="tile-name">Volunteer Service App</span>
         </button>
         <button class="tile" type="button" role="tab" id="tab-incidentaid" aria-controls="panel-incidentaid" aria-selected="false">
-          <img src="assets/logos/incidentaid.png" alt="" width="130" height="130">
+          <img src="assets/logos/incidentaid.png" alt="" width="130" height="130" draggable="false">
           <span class="tile-name">IncidentAid</span>
         </button>
         <button class="tile" type="button" role="tab" id="tab-ha" aria-controls="panel-ha" aria-selected="false">
-          <img src="assets/logos/ha-mark.svg" alt="" width="130" height="130">
+          <img src="assets/logos/ha-mark.svg" alt="" width="130" height="130" draggable="false">
           <span class="tile-name">Hydration Automation</span>
         </button>
         <button class="tile" type="button" role="tab" id="tab-beyondlist" aria-controls="panel-beyondlist" aria-selected="false">
-          <img src="assets/logos/beyondlist.png" alt="" width="130" height="130">
+          <img src="assets/logos/beyondlist.png" alt="" width="130" height="130" draggable="false">
           <span class="tile-name">BeyondList</span>
         </button>
         <button class="tile" type="button" role="tab" id="tab-frona" aria-controls="panel-frona" aria-selected="false">
-          <img src="assets/logos/frona.png" alt="" width="130" height="130">
+          <img src="assets/logos/frona.png" alt="" width="130" height="130" draggable="false">
           <span class="tile-name">Frona</span>
         </button>
       </div>
@@ -416,79 +453,181 @@
     </div>
   </section>
 
-  <!-- ============ EXPERIENCE ============ -->
+  <!-- ============ EXPERIENCE & EDUCATION ============ -->
   <section id="experience" class="wrap">
     <h2>Experience</h2>
-    <ul class="timeline">
-      <li>
-        <span class="when">May 2026 – Present</span>
-        <div>
-          <h3>AI Research Assistant — AIM Lab, Santa Clara University</h3>
-          <p>LLM generation-and-evaluation systems for dementia-caregiver QA and code tutoring.</p>
+    <div class="timeline-track">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <h3 class="timeline-title">AI Research Assistant <span class="timeline-org">— AIM Lab, Santa Clara University</span></h3>
+            <span class="timeline-badge">May 2026 – Present</span>
+          </div>
+          <p class="timeline-desc">
+            Researching LLM generation and evaluation systems for dementia-caregiver QA benchmarks and misconception-in-the-loop programming tutors.
+          </p>
+          <ul class="timeline-bullets">
+            <li>Built fault-tolerant GPU evaluation harnesses on EvoCodeBench across multi-hour outage risks.</li>
+            <li>Developed human-annotation web tools (React/Vite + Supabase) for rating generated QA pairs.</li>
+          </ul>
         </div>
-      </li>
-      <li>
-        <span class="when">2025 – Present</span>
-        <div>
-          <h3>Software Engineering Research Assistant — EPIC Lab, Santa Clara University</h3>
-          <p>Developing the lab's IoT and emergency-response applications, Hydration Automation and IncidentAid.</p>
-        </div>
-      </li>
-      <li>
-        <span class="when">2021 – 2023</span>
-        <div>
-          <h3>Co-Founder &amp; Lead Engineer — Frona Tech, Egypt</h3>
-          <p>Led a team of four engineers from concept to release on both app stores.</p>
-        </div>
-      </li>
-      <li>
-        <span class="when">2019 – 2020</span>
-        <div>
-          <h3>Teaching Assistant — Alexandria University</h3>
-          <p>Taught classes and labs in Programming, Design of Algorithms, and Operating Systems.</p>
-        </div>
-      </li>
-    </ul>
+      </div>
 
-    <h2 class="sub">Education</h2>
-    <ul class="timeline">
-      <li>
-        <span class="when">Jan 2025 – Dec 2026 (exp.)</span>
-        <div>
-          <h3>M.S. Computer Science &amp; Engineering — Santa Clara University</h3>
-          <p>GPA 3.87</p>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <h3 class="timeline-title">Software Engineering Research Assistant <span class="timeline-org">— EPIC Lab, Santa Clara University</span></h3>
+            <span class="timeline-badge">2025 – Present</span>
+          </div>
+          <p class="timeline-desc">
+            Developing real-time IoT and emergency-response platforms for agricultural and first-responder applications.
+          </p>
+          <ul class="timeline-bullets">
+            <li>Lead developer on <strong>Hydration Automation</strong> (Flutter, Node.js/Express, LoRa, NFC, Arduino C++).</li>
+            <li>Primary engineer on <strong>IncidentAid</strong> (Flutter, Firebase, BLE beacon tracking, offline map tiling).</li>
+          </ul>
         </div>
-      </li>
-      <li>
-        <span class="when">2019</span>
-        <div>
-          <h3>B.S. Computer &amp; Communications Engineering — Alexandria University</h3>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <h3 class="timeline-title">Co-Founder &amp; Lead Engineer <span class="timeline-org">— Frona Tech, Egypt</span></h3>
+            <span class="timeline-badge">2021 – 2023</span>
+          </div>
+          <p class="timeline-desc">
+            Co-founded a mobile technology startup and led product development from concept to store deployment.
+          </p>
+          <ul class="timeline-bullets">
+            <li>Managed a team of four engineers across mobile frontend, backend APIs, and UI/UX design.</li>
+            <li>Built cross-platform Flutter applications published live on Google Play &amp; App Store.</li>
+          </ul>
         </div>
-      </li>
-    </ul>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <h3 class="timeline-title">Teaching Assistant <span class="timeline-org">— Alexandria University</span></h3>
+            <span class="timeline-badge">2019 – 2020</span>
+          </div>
+          <p class="timeline-desc">
+            Taught undergraduate Computer Science classes and led weekly laboratory sessions.
+          </p>
+          <ul class="timeline-bullets">
+            <li>Conducted lab sessions for <em>Programming in C/C++</em>, <em>Design &amp; Analysis of Algorithms</em>, and <em>Operating Systems</em>.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="sub" style="margin-top: 3rem;">Education</h2>
+    <div class="timeline-track">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <h3 class="timeline-title">M.S. Computer Science &amp; Engineering <span class="timeline-org">— Santa Clara University</span></h3>
+            <span class="timeline-badge">Jan 2025 – Dec 2026 (exp.)</span>
+          </div>
+          <p class="timeline-desc">
+            GPA: <strong>3.87</strong> · Focus on AI/LLM Systems, Mobile Software Engineering, and IoT. Directed research with AIM Lab &amp; EPIC Lab.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <h3 class="timeline-title">B.S. Computer &amp; Communications Engineering <span class="timeline-org">— Alexandria University</span></h3>
+            <span class="timeline-badge">2019</span>
+          </div>
+          <p class="timeline-desc">
+            Graduation Thesis: Neural Text-to-Speech &amp; Voice Imitation using deep learning and Tacotron 2.
+          </p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- ============ SKILLS ============ -->
   <section id="skills" class="wrap">
     <h2>Skills</h2>
-    <dl class="skills">
-      <div><dt>Languages</dt><dd>Java, Python, Dart, Scala, C, C++, JavaScript, SQL</dd></div>
-      <div><dt>Frameworks &amp; Tools</dt><dd>Flutter, Spring Boot, Node.js/Express, PyTorch, scikit-learn, Hugging Face Transformers, Firebase, MongoDB, PostgreSQL, Supabase, AWS, Docker, Git, Claude Code, Figma</dd></div>
-      <div><dt>AI / ML</dt><dd>Deep learning, computer vision, NLP, LLMs, RAG, LoRA, transfer learning, model evaluation</dd></div>
-      <div><dt>Hardware &amp; Embedded</dt><dd>Verilog, SystemVerilog, SAMD21/Arduino firmware, LoRa, Assembly (x86, MIPS)</dd></div>
-      <div><dt>Spoken</dt><dd>Arabic (fluent), English (fluent)</dd></div>
-    </dl>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <svg class="skill-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          <h3>Languages</h3>
+        </div>
+        <div class="skill-tags">
+          <span>Java</span><span>Python</span><span>Dart</span><span>Scala</span><span>C / C++</span><span>JavaScript</span><span>SQL</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <svg class="skill-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+          <h3>Frameworks &amp; Libraries</h3>
+        </div>
+        <div class="skill-tags">
+          <span>Flutter</span><span>Spring Boot</span><span>Node.js / Express</span><span>PyTorch</span><span>scikit-learn</span><span>Hugging Face</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <svg class="skill-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          <h3>AI &amp; Machine Learning</h3>
+        </div>
+        <div class="skill-tags">
+          <span>LLMs &amp; RAG</span><span>Deep Learning</span><span>NLP</span><span>Computer Vision</span><span>LoRA Fine-Tuning</span><span>Model Evaluation</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <svg class="skill-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"></ellipse><path d="M4 5v14c0 1.66 3.58 3 8 3s8-1.34 8-3V5"></path><path d="M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3"></path></svg>
+          <h3>Data, Cloud &amp; Tools</h3>
+        </div>
+        <div class="skill-tags">
+          <span>Firebase</span><span>Supabase</span><span>PostgreSQL</span><span>MongoDB</span><span>AWS</span><span>Docker</span><span>Git</span><span>Figma</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <svg class="skill-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="15" x2="23" y2="15"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="15" x2="4" y2="15"></line></svg>
+          <h3>Hardware &amp; Embedded</h3>
+        </div>
+        <div class="skill-tags">
+          <span>Verilog</span><span>SystemVerilog</span><span>SAMD21 / Arduino C++</span><span>LoRa RF</span><span>Assembly (x86, MIPS)</span>
+        </div>
+      </div>
+
+    </div>
+    <p class="skills-note"><span>Spoken languages</span> Arabic (fluent) · English (fluent)</p>
   </section>
 
-  <!-- ============ BEYOND ============ -->
+  <!-- ============ BEYOND CODE ============ -->
   <section id="beyond" class="wrap">
     <h2>Beyond code</h2>
-    <p class="prose">
-      I've volunteered for 15+ years with elderly people, orphans, and people with disabilities
-      in Egypt, and since 2020 I've led volunteer training and coordination at the same
-      organization — the one I built the management app above for. The best software I've
-      shipped is the kind my own community depends on.
-    </p>
+    <div class="beyond-card">
+      <div class="beyond-badge">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+        15+ Years Community Leadership
+      </div>
+      <p class="beyond-text">
+        I've volunteered for <strong>15+ years</strong> supporting elderly individuals, orphans, and community members with disabilities in Egypt. Since 2020, I’ve led volunteer training and operational coordination at the same organization — which directly inspired me to build the custom <a href="#tab-volunteer" class="beyond-link">Volunteer Service Management App</a> featured in my projects above.
+      </p>
+      <blockquote class="beyond-quote">
+        “The best software I’ve shipped is the kind my own community depends on every single day.”
+      </blockquote>
+    </div>
   </section>
 
 </main>
@@ -514,6 +653,25 @@
 </footer>
 
 <script>
+  // Hero scene: a gentle parallax tilt that follows the pointer.
+  (function () {
+    var scene = document.getElementById('hv-scene');
+    var hero = document.querySelector('.hero');
+    if (!scene || !hero) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    hero.addEventListener('pointermove', function (e) {
+      var r = hero.getBoundingClientRect();
+      var px = (e.clientX - r.left) / r.width - 0.5;   // -0.5 … 0.5
+      var py = (e.clientY - r.top) / r.height - 0.5;
+      scene.style.setProperty('--ry', (px * 14).toFixed(2) + 'deg');
+      scene.style.setProperty('--rx', (-py * 10).toFixed(2) + 'deg');
+    });
+    hero.addEventListener('pointerleave', function () {
+      scene.style.setProperty('--ry', '0deg');
+      scene.style.setProperty('--rx', '0deg');
+    });
+  })();
+
   // Projects shelf: tiles rotate, the centred one owns the detail panel below.
   (function () {
     [].slice.call(document.querySelectorAll('.stage')).forEach(initShelf);
@@ -529,16 +687,71 @@
 
     stage.classList.add('is-enhanced');
 
+    // --- decorative curve threading through the tile centres (drawn behind them) ---
+    var SVGNS = 'http://www.w3.org/2000/svg';
+    var gradId = 'curve-' + (stage.id || Math.round(performance.now()));
+    var curveSvg = document.createElementNS(SVGNS, 'svg');
+    curveSvg.setAttribute('class', 'shelf-curve');
+    curveSvg.setAttribute('aria-hidden', 'true');
+    curveSvg.innerHTML =
+      '<defs><linearGradient id="' + gradId + '" x1="0" y1="0" x2="1" y2="0">' +
+      '<stop offset="0" stop-color="currentColor" stop-opacity="0"/>' +
+      '<stop offset="0.07" stop-color="currentColor" stop-opacity="0.9"/>' +
+      '<stop offset="0.32" stop-color="currentColor" stop-opacity="0.7"/>' +
+      '<stop offset="0.44" stop-color="currentColor" stop-opacity="0.18"/>' +
+      '<stop offset="0.5" stop-color="currentColor" stop-opacity="0.12"/>' +
+      '<stop offset="0.56" stop-color="currentColor" stop-opacity="0.18"/>' +
+      '<stop offset="0.68" stop-color="currentColor" stop-opacity="0.7"/>' +
+      '<stop offset="0.93" stop-color="currentColor" stop-opacity="0.9"/>' +
+      '<stop offset="1" stop-color="currentColor" stop-opacity="0"/>' +
+      '</linearGradient></defs>' +
+      '<path fill="none" stroke="url(#' + gradId + ')" stroke-width="2" stroke-linecap="round"/>';
+    shelf.insertBefore(curveSvg, shelf.firstChild);
+    var curvePath = curveSvg.querySelector('path');
+
+    function drawCurve() {
+      var W = shelf.clientWidth, H = shelf.clientHeight;
+      if (!W || !H) return;
+      var w = tiles[0].offsetWidth || 200;
+      curveSvg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+
+      // one point per slot, using the same x/y maths that positions the tiles
+      var pts = [];
+      for (var d = -2; d <= 2; d++) {
+        var dist = Math.abs(d), dir = d < 0 ? -1 : 1;
+        pts.push([
+          W / 2 + dir * w * (dist <= 1 ? dist * 0.95 : 0.95 + (dist - 1) * 0.7),
+          H / 2 + (dist <= 1 ? dist * 16 : 16 + (dist - 1) * 16)
+        ]);
+      }
+      // carry the end slope out to both edges so the curve leaves the frame
+      function extend(a, b, x) { return [x, a[1] + (a[1] - b[1]) / (a[0] - b[0]) * (x - a[0])]; }
+      pts.unshift(extend(pts[0], pts[1], 0));
+      pts.push(extend(pts[pts.length - 1], pts[pts.length - 2], W));
+
+      // Catmull-Rom through the points, expressed as cubic Béziers
+      var d2 = 'M' + pts[0][0].toFixed(1) + ',' + pts[0][1].toFixed(1);
+      for (var i = 0; i < pts.length - 1; i++) {
+        var p0 = pts[i - 1] || pts[i], p1 = pts[i], p2 = pts[i + 1], p3 = pts[i + 2] || pts[i + 1];
+        d2 += 'C' + (p1[0] + (p2[0] - p0[0]) / 6).toFixed(1) + ',' + (p1[1] + (p2[1] - p0[1]) / 6).toFixed(1)
+            + ' ' + (p2[0] - (p3[0] - p1[0]) / 6).toFixed(1) + ',' + (p2[1] - (p3[1] - p1[1]) / 6).toFixed(1)
+            + ' ' + p2[0].toFixed(1) + ',' + p2[1].toFixed(1);
+      }
+      curvePath.setAttribute('d', d2);
+    }
+
     var focus = 0;
-    var prevRel = [];
     var hoverTimer = 0;
     var hoverLockUntil = 0;
     var isDragging = false;
+    var hasMoved = false;
     var startX = 0;
     var startFocusFloat = 0;
+    var currentFloat = 0;
 
     function place(customFocus) {
       var f = (customFocus !== undefined) ? customFocus : focus;
+      currentFloat = f;
       var w = tiles[0].offsetWidth || 190;
       tiles.forEach(function (tile, i) {
         var rel = (i - f) % n;
@@ -556,8 +769,10 @@
         var y = dist <= 1 ? dist * 16 : 16 + (dist - 1) * 16;
         var far = dist > 2.2;
 
-        var opacity = far ? 0 : Math.max(0.4, 1 - dist * 0.22);
-        tile.style.opacity = String(opacity);
+        // keep the card itself opaque so the hairline stays hidden behind it;
+        // depth is expressed by dimming the contents instead (see --depth in CSS)
+        tile.style.opacity = far ? '0' : '1';
+        tile.style.setProperty('--depth', Math.min(dist, 2).toFixed(2));
         tile.style.transform = 'translate3d(' + x + 'px, ' + y + 'px, 0) scale(' + scale + ')';
         tile.style.zIndex = String(Math.round(10 - dist));
         tile.style.pointerEvents = far ? 'none' : 'auto';
@@ -583,43 +798,94 @@
     }
 
     tiles.forEach(function (tile, i) {
-      tile.addEventListener('click', function () {
+      tile.addEventListener('click', function (e) {
+        if (hasMoved) { e.preventDefault(); return; }
         hoverLockUntil = Date.now() + 600;
         setFocus(i);
       });
       tile.addEventListener('mouseenter', function () {
-        if (Date.now() < hoverLockUntil) return;
+        if (isDragging || Date.now() < hoverLockUntil) return;
         clearTimeout(hoverTimer);
         hoverTimer = setTimeout(function () {
-          hoverLockUntil = Date.now() + 700; // deliberate delay before rotating on hover
-          setFocus(i);
+          if (!isDragging) {
+            hoverLockUntil = Date.now() + 700;
+            setFocus(i);
+          }
         }, 450);
       });
       tile.addEventListener('mouseleave', function () { clearTimeout(hoverTimer); });
       tile.addEventListener('focus', function () { setFocus(i); });
     });
 
-    var wheelLockUntil = 0;
-    var wheelGestureActive = false;
-    var wheelTimer = 0;
+    // --- DRAG GESTURES (Desktop Mouse + Mobile Touch) ---
+    function onDragStart(clientX) {
+      isDragging = true;
+      hasMoved = false;
+      startX = clientX;
+      startFocusFloat = currentFloat;
+      hoverLockUntil = Date.now() + 10000;
+    }
 
+    function onDragMove(clientX) {
+      if (!isDragging) return;
+      var dx = clientX - startX;
+      if (Math.abs(dx) > 6) hasMoved = true;
+      var tileW = tiles[0].offsetWidth || 190;
+      var dragDelta = -dx / (tileW * 0.85);
+      place(startFocusFloat + dragDelta);
+    }
+
+    function onDragEnd() {
+      if (!isDragging) return;
+      isDragging = false;
+      var nearest = Math.round(currentFloat);
+      hoverLockUntil = Date.now() + 600;
+      setFocus(nearest);
+      setTimeout(function () { hasMoved = false; }, 50);
+    }
+
+    // Mouse drag
+    shelf.addEventListener('mousedown', function (e) {
+      if (e.button !== 0) return;
+      onDragStart(e.clientX);
+    });
+    window.addEventListener('mousemove', function (e) {
+      if (isDragging) onDragMove(e.clientX);
+    });
+    window.addEventListener('mouseup', function () {
+      if (isDragging) onDragEnd();
+    });
+
+    // Touch drag
+    shelf.addEventListener('touchstart', function (e) {
+      onDragStart(e.touches[0].clientX);
+    }, { passive: true });
+
+    shelf.addEventListener('touchmove', function (e) {
+      if (isDragging) onDragMove(e.touches[0].clientX);
+    }, { passive: true });
+
+    shelf.addEventListener('touchend', function () {
+      if (isDragging) onDragEnd();
+    });
+
+    // Trackpad & Mouse wheel continuous scroll + snap on stop
+    var wheelTimer = 0;
     shelf.addEventListener('wheel', function (e) {
       var delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
-      if (Math.abs(delta) < 4) return;
+      if (Math.abs(delta) < 3) return;
       e.preventDefault();
+
+      hoverLockUntil = Date.now() + 10000;
+      var scrollDelta = delta * 0.0035;
+      place(currentFloat + scrollDelta);
 
       clearTimeout(wheelTimer);
       wheelTimer = setTimeout(function () {
-        wheelGestureActive = false;
-      }, 450);
-
-      var now = Date.now();
-      if (wheelGestureActive || now < wheelLockUntil) return;
-
-      wheelGestureActive = true;
-      wheelLockUntil = now + 650;
-      hoverLockUntil = now + 750;
-      setFocus(focus + (delta > 0 ? 1 : -1));
+        var nearest = Math.round(currentFloat);
+        hoverLockUntil = Date.now() + 600;
+        setFocus(nearest);
+      }, 140);
     }, { passive: false });
 
     shelf.addEventListener('keydown', function (e) {
@@ -627,37 +893,10 @@
       else if (e.key === 'ArrowLeft') { e.preventDefault(); setFocus(focus - 1); tiles[focus].focus(); }
     });
 
-    shelf.addEventListener('touchstart', function (e) {
-      isDragging = true;
-      startX = e.touches[0].clientX;
-      startFocusFloat = focus;
-      hoverLockUntil = Date.now() + 10000;
-    }, { passive: true });
-
-    shelf.addEventListener('touchmove', function (e) {
-      if (!isDragging) return;
-      var dx = e.touches[0].clientX - startX;
-      var tileW = tiles[0].offsetWidth || 190;
-      var dragDelta = -dx / (tileW * 0.85);
-      var currentFloat = startFocusFloat + dragDelta;
-      place(currentFloat);
-    }, { passive: true });
-
-    shelf.addEventListener('touchend', function (e) {
-      if (!isDragging) return;
-      isDragging = false;
-      var dx = e.changedTouches[0].clientX - startX;
-      var tileW = tiles[0].offsetWidth || 190;
-      var dragDelta = -dx / (tileW * 0.85);
-      var finalFloat = startFocusFloat + dragDelta;
-
-      var nearest = Math.round(finalFloat);
-      hoverLockUntil = Date.now() + 600;
-      setFocus(nearest);
-    });
-
-    window.addEventListener('resize', place);
+    window.addEventListener('resize', function () { place(); drawCurve(); });
     place();
+    drawCurve();
+    setTimeout(drawCurve, 120);   // re-measure once webfonts/layout settle
     }
   })();
 
