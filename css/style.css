@@ -402,6 +402,13 @@ main section { padding: 4.5rem 0 1.5rem; }
   border: 1px solid var(--line); box-shadow: var(--shadow);
 }
 .demo figcaption { color: var(--ink-soft); font-size: 0.88rem; margin-top: 0.55rem; }
+.award-photo { max-width: 640px; margin-top: 1.2rem; }
+.demo-embed { max-width: 760px; margin-top: 1.2rem; }
+.video-frame { position: relative; aspect-ratio: 16 / 9; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); box-shadow: var(--shadow); background: #000; }
+.video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.demo-portrait { max-width: 340px; margin-top: 1.2rem; }
+.card .demo-portrait figcaption { max-width: none; }
+.note { font-size: 0.88rem !important; color: var(--ink-soft); border-left: 2px solid #f2c14e; padding-left: 0.8rem; }
 .demo-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 .demo-duo figcaption { grid-column: 1 / -1; margin-top: 0; }
 @media (max-width: 760px) { .demo-duo { grid-template-columns: 1fr; } }
@@ -462,7 +469,7 @@ main section { padding: 4.5rem 0 1.5rem; }
 .panels { margin-top: 1.8rem; }
 
 /* enhanced: tiles sit on the shelf, sized by distance from the centre */
-.stage { position: relative; }
+.stage { position: relative; overflow-x: clip; }   /* outer tiles must not widen the page on phones */
 .stage.is-enhanced .shelf {
   display: block; position: relative; height: var(--tile-h);
   max-width: 1160px; margin: 0 auto; touch-action: pan-y;
@@ -545,6 +552,18 @@ main section { padding: 4.5rem 0 1.5rem; }
 .tile-text { justify-content: center; gap: 0.5rem; }
 .tile-text .tile-name { font-family: "Fraunces", Georgia, serif; font-size: 1.25rem; font-weight: 600; }
 .tile-sub { color: var(--ink-soft); font-size: 0.78rem; line-height: 1.3; }
+
+/* award markers (hackathons) */
+.tile-award, .award {
+  display: inline-flex; align-items: center; gap: 0.3rem;
+  color: #f2c14e; font-weight: 600;
+}
+.tile-award {
+  font-size: 0.7rem; letter-spacing: 0.04em; text-transform: uppercase;
+  padding: 0.2rem 0.6rem; border: 1px solid rgba(242, 193, 78, 0.45);
+  border-radius: 999px; background: rgba(242, 193, 78, 0.08);
+}
+.tile-award::before, .award::before { content: "★"; }
 
 /* ===== embedded media ===== */
 details.embed-details {
@@ -736,7 +755,6 @@ details.embed-details .embed-container {
   margin-top: 1.4rem;
 }
 .skill-card { grid-column: span 2; }
-.skill-card:nth-child(4), .skill-card:nth-child(5) { grid-column: span 3; }
 .skills-note {
   margin-top: 1.2rem; color: var(--ink-soft); font-size: 0.92rem;
 }
@@ -753,7 +771,7 @@ details.embed-details .embed-container {
 }
 @media (max-width: 900px) {
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
-  .skill-card, .skill-card:nth-child(4), .skill-card:nth-child(5) { grid-column: span 1; }
+  .skill-card { grid-column: span 1; }
 }
 @media (max-width: 560px) {
   .skills-grid { grid-template-columns: 1fr; }
@@ -926,3 +944,14 @@ footer .cta-row { justify-content: center; margin-top: 1.4rem; }
   .nav-links a { display: none !important; }
   .nav-links a.nav-resume { display: inline-flex !important; }
 }
+
+/* hero award callout */
+.hero-award {
+  display: inline-flex; align-items: center; gap: 0.55rem; flex-wrap: wrap;
+  margin-top: 1.4rem; padding: 0.6rem 1rem;
+  border: 1px solid rgba(242, 193, 78, 0.45); border-radius: 12px;
+  background: rgba(242, 193, 78, 0.08); color: var(--ink); font-size: 0.92rem;
+}
+.hero-award strong { color: #f2c14e; }
+.hero-award strong::before { content: "★ "; }
+.hero-award a { color: #f2c14e; font-weight: 600; }

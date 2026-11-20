@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Catherine Awad — Software Engineer</title>
-<meta name="description" content="Catherine Awad — software engineer building Flutter apps end to end, from UI to backend to firmware, with research work in LLM evaluation.">
+<title>Catherine Awad | Software Engineer</title>
+<meta name="description" content="Catherine Awad, software engineer. I build apps end to end, from the UI to the backend and firmware, and research LLMs and how to evaluate them.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -16,8 +16,9 @@
   <nav class="wrap">
     <a class="brand" href="#top">Catherine Awad</a>
     <div class="nav-links">
-      <a href="#projects">Projects</a>
       <a href="#research">Research</a>
+      <a href="#projects">Projects</a>
+      <a href="#hackathons">Hackathons</a>
       <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
       <a class="btn btn-primary nav-resume" href="assets/Catherine_Awad_CV.pdf" download="Catherine_Awad_Resume.pdf">
@@ -39,12 +40,17 @@
     <div class="hero-bg" aria-hidden="true"></div>
     <div class="hero-copy">
     <p class="kicker">Bay Area, CA</p>
-    <h1 class="hero-statement">Software engineer building products <em>end to end</em>, and researching how LLMs can make software genuinely useful.</h1>
+    <h1 class="hero-statement">I like building things <em>end to end</em>: apps, backends, firmware, and research how to make LLMs work and how to measure if they do.</h1>
       <div class="hero-pillars">
         <span class="pillar-chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg> Cross-Platform Mobile</span>
         <span class="pillar-chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg> Full-Stack &amp; Firmware</span>
         <span class="pillar-chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> LLMs &amp; AI Research</span>
       </div>
+      <p class="hero-award">
+        <strong>Best Solution, Track 2</strong>
+        <span>MantisGrid AI Hackathon 2026</span>
+        <a href="#hackathons">See the project →</a>
+      </p>
       </div>
 
     <div class="hero-visual" aria-hidden="true">
@@ -86,198 +92,11 @@
     </div>
   </section>
 
-  <!-- ============ PROJECTS ============ -->
-  <section id="projects">
-    <div class="wrap">
-      <h2>Projects</h2>
-      <p class="section-hint">Hover a project — or scroll across the row — to bring it into focus.</p>
-    </div>
-
-    <div class="stage" id="projects-stage">
-      <div class="shelf" id="projects-shelf" role="tablist" aria-label="Projects">
-        <button class="tile" type="button" role="tab" id="tab-volunteer" aria-controls="panel-volunteer" aria-selected="true">
-          <img src="assets/logos/volunteer.png" alt="" width="130" height="130" draggable="false">
-          <span class="tile-name">Volunteer Service App</span>
-        </button>
-        <button class="tile" type="button" role="tab" id="tab-incidentaid" aria-controls="panel-incidentaid" aria-selected="false">
-          <img src="assets/logos/incidentaid.png" alt="" width="130" height="130" draggable="false">
-          <span class="tile-name">IncidentAid</span>
-        </button>
-        <button class="tile" type="button" role="tab" id="tab-ha" aria-controls="panel-ha" aria-selected="false">
-          <img src="assets/logos/ha-mark.svg" alt="" width="130" height="130" draggable="false">
-          <span class="tile-name">Hydration Automation</span>
-        </button>
-        <button class="tile" type="button" role="tab" id="tab-beyondlist" aria-controls="panel-beyondlist" aria-selected="false">
-          <img src="assets/logos/beyondlist.png" alt="" width="130" height="130" draggable="false">
-          <span class="tile-name">BeyondList</span>
-        </button>
-        <button class="tile" type="button" role="tab" id="tab-frona" aria-controls="panel-frona" aria-selected="false">
-          <img src="assets/logos/frona.png" alt="" width="130" height="130" draggable="false">
-          <span class="tile-name">Frona</span>
-        </button>
-      </div>
-      <div class="panels wrap" id="projects-panels">
-
-    <article class="project" id="panel-volunteer" role="tabpanel" aria-labelledby="tab-volunteer">
-      <div class="project-info">
-        <h3>Volunteer Service Management App</h3>
-        <p class="meta">Solo Project · Production App Live on Google Play</p>
-        <p class="tags"><span>Flutter</span><span>Firebase</span><span>Riverpod</span><span>Cloud Functions</span></p>
-        <p>
-          Built solo, from scratch, for a volunteer organization in Egypt: a bilingual
-          (Arabic/English) app that organizes records of the visually impaired and elderly
-          community members served, plus volunteers, groups, and announcements.
-        </p>
-        <p>
-          Role-based access with admin approval flows, audit logging, timezone-aware push
-          notifications (FCM + Cloud Functions), and compressed, cached image handling on
-          Firebase. Live on Google Play. The full right-to-left Arabic interface is a
-          first-class citizen, not an afterthought.
-        </p>
-      </div>
-      <div class="shots">
-        <img src="assets/volunteer/01_login_en.png" alt="Volunteer app login screen in English" loading="lazy">
-        <img src="assets/volunteer/02_login_ar.png" alt="Volunteer app login screen in Arabic, fully right-to-left" loading="lazy">
-        <img src="assets/volunteer/04_add_person_dark.png" alt="Add Person form in dark mode with bilingual group chips" loading="lazy">
-        <img src="assets/volunteer/05_add_person_ar.png" alt="Add Person form in Arabic, fully right-to-left, dark mode" loading="lazy">
-        <img src="assets/volunteer/06_roles.png" alt="Role selection: admin, moderator, head, regular" loading="lazy">
-      </div>
-      <figure class="demo">
-        <img src="assets/volunteer/07_tablet_dashboard.png" alt="Admin dashboard on a tablet showing the service groups grid" loading="lazy">
-        <figcaption>
-          The admin dashboard on a tablet — the same codebase adapts to larger screens,
-          with service groups organizing the people served.
-        </figcaption>
-      </figure>
-    </article>
-
-    <article class="project" id="panel-incidentaid" role="tabpanel" aria-labelledby="tab-incidentaid">
-      <div class="project-info">
-        <h3>IncidentAid</h3>
-        <p class="meta">EPIC Lab, Santa Clara University · Emergency Response Platform</p>
-        <p class="tags"><span>Flutter</span><span>Firebase</span><span>Riverpod</span><span>Google Maps</span><span>BLE</span></p>
-        <p>
-          An incident-reporting and response-coordination app for firefighters, built at
-          Santa Clara University's EPIC Lab — primary lead developer.
-        </p>
-        <p>
-          Rebuilt from its earlier native versions into a single cross-platform Flutter app and
-          redesigned end to end: new UI/UX prototyped in Figma, Riverpod state management, a
-          repository-pattern data layer, a migration from Firebase Realtime Database to Firestore,
-          and role-based dashboards and navigation. Integrated Google Maps/Places, BLE beacon
-          scanning, and real-time alert flows, with isolated prod/dev Firebase environments.
-        </p>
-      </div>
-      <div class="shots">
-        <img src="assets/incidentaid/03_captain_dashboard_home.png" alt="IncidentAid captain dashboard with station readiness and active incidents" loading="lazy">
-        <img src="assets/incidentaid/04_crew_tab.png" alt="IncidentAid crew management tab" loading="lazy">
-        <img src="assets/incidentaid/01_login.png" alt="IncidentAid login screen" loading="lazy">
-      </div>
-      <figure class="demo">
-        <video controls preload="none" playsinline poster="assets/incidentaid/demo_poster.jpg">
-          <source src="assets/incidentaid/demo.mp4" type="video/mp4">
-        </video>
-        <figcaption>
-          Two-minute demo: PAR check-ins and Mayday flows propagating live across an iPhone
-          simulator, an Android phone, and a command tablet, all running against the same backend.
-        </figcaption>
-      </figure>
-    </article>
-
-    <article class="project" id="panel-ha" role="tabpanel" aria-labelledby="tab-ha">
-      <div class="project-info">
-        <h3>Hydration Automation</h3>
-        <p class="meta">EPIC Lab, Santa Clara University · Agricultural IoT Platform</p>
-        <p class="tags"><span>Flutter</span><span>Node.js/Express</span><span>Arduino&nbsp;C++</span><span>LoRa</span><span>NFC</span></p>
-        <p>
-          An IoT platform for real-time monitoring of agricultural hydration systems,
-          built at Santa Clara University's EPIC Lab.
-        </p>
-        <p>
-          Full-stack development across every tier: cross-platform Flutter app (NFC and QR device
-          onboarding, real-time sensor dashboards, localization), embedded firmware (Arduino/C++
-          on SAMD21 with LoRa: ACK-gated queueing, NTP clocks, telemetry), Express backend with
-          magic-link authentication, and the responsive public website localized in two languages with light/dark themes.
-        </p>
-        <p class="repo-link">
-          <a href="https://hydrationautomation.com" rel="noopener" target="_blank">Visit hydrationautomation.com →</a>
-        </p>
-      </div>
-      <div class="shots">
-        <img src="assets/ha/03_dashboard_light.png" alt="Hydration Automation dashboard with farm map and moisture gauge" loading="lazy">
-        <img src="assets/ha/04_dashboard_stats_light.png" alt="Dashboard metric tiles: temperature, humidity, soil moisture, stations online" loading="lazy">
-        <img src="assets/ha/05_stations_light.png" alt="Stations list with live sensor telemetry" loading="lazy">
-        <img src="assets/ha/06_dashboard_dark.png" alt="Dashboard in dark mode" loading="lazy">
-        <img src="assets/ha/07_stations_dark.png" alt="Stations list in dark mode" loading="lazy">
-        <img src="assets/ha/01_signin.png" alt="Hydration Automation sign-in screen" loading="lazy">
-      </div>
-      <figure class="demo demo-duo">
-        <img src="assets/ha/mac_dashboard_light.png" alt="Hydration Automation macOS desktop app, light theme" loading="lazy">
-        <img src="assets/ha/mac_dashboard_dark.png" alt="Hydration Automation macOS desktop app, dark theme" loading="lazy">
-        <figcaption>
-          The same Flutter codebase runs as a native macOS desktop app with a responsive
-          wide-screen layout — shown in light and dark themes.
-        </figcaption>
-      </figure>
-    </article>
-
-    <article class="project" id="panel-beyondlist" role="tabpanel" aria-labelledby="tab-beyondlist">
-      <div class="project-info">
-        <h3>BeyondList</h3>
-        <p class="meta">Personal Project · Real-Time Collaborative App</p>
-        <p class="tags"><span>Flutter</span><span>Firebase</span><span>Spring Boot</span><span>OAuth2/JWT</span><span>PostgreSQL</span></p>
-        <p>
-          A real-time collaborative shopping-list and expense management application for households and families — engineered across two distinct backend architectures to compare serverless cloud sync against self-hosted Java microservices.
-        </p>
-        <p>
-          Features real-time item check-offs, collaborative household list sharing, expense splitting, and offline-first local caching to guarantee instant UI responsiveness even without active network access.
-        </p>
-        <p>
-          <strong>Dual-Stack Architecture:</strong> Built initially as a serverless Flutter + Firebase architecture using Firestore real-time listeners, then re-architected with a custom Java <strong>Spring Boot REST API</strong> backed by <strong>Spring Security (OAuth2 / JWT authentication)</strong>, Spring Data JPA, and a <strong>PostgreSQL</strong> relational database.
-        </p>
-        <p class="repo-link"><a href="https://github.com/c-awad/beyond_list" rel="noopener" target="_blank">View source on GitHub →</a></p>
-      </div>
-      <div class="shots">
-        <img src="assets/beyondlist/04_home.png" alt="BeyondList home screen with shopping lists" loading="lazy">
-        <img src="assets/beyondlist/02_list_items.png" alt="BeyondList grocery list with items and quantities" loading="lazy">
-        <img src="assets/beyondlist/03_list_checked.png" alt="BeyondList list with checked-off items" loading="lazy">
-        <img src="assets/beyondlist/01_login.png" alt="BeyondList login screen" loading="lazy">
-      </div>
-    </article>
-
-    <article class="project" id="panel-frona" role="tabpanel" aria-labelledby="tab-frona">
-      <div class="project-info">
-        <h3>Frona — Diet &amp; Fitness Platform</h3>
-        <p class="meta">Frona Tech Startup · Released on App Store &amp; Google Play</p>
-        <p class="tags"><span>Flutter</span><span>Scala</span><span>gRPC</span><span>AWS</span><span>Docker</span><span>PostgreSQL</span></p>
-        <p>
-          Co-founded Frona Tech and served as Lead Software Engineer, taking a full-stack, cross-platform diet and fitness platform from initial architecture to production releases on both the <strong>App Store</strong> and <strong>Google Play</strong>.
-        </p>
-        <p>
-          <strong>Key Features:</strong> Custom diet &amp; macro engine (Keto/Paleo with barcode scanning), real-time workout trainer mode (supersets, rest timers &amp; lift progression graphs), and influencer plan sharing.
-        </p>
-        <p>
-          <strong>Architecture:</strong> Cross-platform <strong>Flutter</strong> mobile clients backed by <strong>Scala microservices</strong> over high-performance <strong>gRPC APIs</strong>, containerized with <strong>Docker</strong> on <strong>AWS</strong>.
-        </p>
-      </div>
-      <div class="shots">
-        <img src="assets/frona/01_onboarding.png" alt="Frona app onboarding screen" loading="lazy">
-        <img src="assets/frona/02_home.png" alt="Frona app home dashboard" loading="lazy">
-        <img src="assets/frona/03_tracker.png" alt="Frona app fitness tracking" loading="lazy">
-        <img src="assets/frona/04_analytics.png" alt="Frona app activity analytics" loading="lazy">
-        <img src="assets/frona/05_profile.png" alt="Frona app user profile" loading="lazy">
-      </div>
-    </article>
-
-      </div>
-    </div>
-  </section>
-
   <!-- ============ RESEARCH ============ -->
   <section id="research">
     <div class="wrap">
       <h2>Research</h2>
-      <p class="section-hint">Hover a topic — or scroll across the row — to bring it into focus.</p>
+      <p class="section-hint">Hover over a topic or scroll the row to see more.</p>
     </div>
 
     <div class="stage" id="research-stage">
@@ -287,8 +106,12 @@
           <span class="tile-sub">Caregiver QA generation</span>
         </button>
         <button class="tile tile-text" type="button" role="tab" id="rtab-mcminer" aria-controls="rpanel-mcminer" aria-selected="false">
-          <span class="tile-name">McMiner</span>
+          <span class="tile-name">McMiner-in-the-Loop</span>
           <span class="tile-sub">LLM code tutoring</span>
+        </button>
+        <button class="tile tile-text" type="button" role="tab" id="rtab-edgepose" aria-controls="rpanel-edgepose" aria-selected="false">
+          <span class="tile-name">On-Device 3D Pose</span>
+          <span class="tile-sub">Simon follow-up research</span>
         </button>
         <button class="tile tile-text" type="button" role="tab" id="rtab-anomaly" aria-controls="rpanel-anomaly" aria-selected="false">
           <span class="tile-name">Anomaly Detection</span>
@@ -302,60 +125,48 @@
       <div class="panels wrap">
 
       <div class="card" id="rpanel-medicalqa" role="tabpanel" aria-labelledby="rtab-medicalqa">
-        <h3>MedicalQA — Caregiver QA Generation &amp; Evaluation</h3>
+        <h3>MedicalQA: Caregiver Q&amp;A from Dementia-Care Videos</h3>
         <p class="meta">AIM Lab, Santa Clara University · ongoing</p>
-        <p class="tags"><span>LLMs</span><span>RAG</span><span>React/Vite</span><span>Supabase</span></p>
+        <p class="tags"><span>LLMs</span><span>vLLM</span><span>LLM-as-judge</span><span>BERTopic</span><span>Whisper</span><span>Supabase</span></p>
         <p>
-          Family caregivers of people with dementia rarely have time to sit through hours of
-          training videos. We're building MedicalQA — an LLM system that generates caregiver
-          question–answer pairs directly from dementia-care training videos, so the guidance
-          in them becomes searchable and conversational — by extending the AIM Lab's
-          MentorQA framework.
-          Generation quality is compared across several pipelines: a single-agent baseline,
-          multi-agent chunking, topic segmentation, and retrieval-augmented generation.
+          Caregivers of people with dementia don't have time to watch hours of training videos. We're building MedicalQA to turn those videos into questions and answers they can search and ask about. It extends our lab's MentorQA framework.
         </p>
         <p>
-          My contributions: I brought in the Teepa Snow dementia-care video dataset,
-          added reproducibility controls (seeding, temperature, and decoding configuration)
-          so pipeline comparisons are apples-to-apples, and built the human-annotation web
-          app (React/Vite + Supabase, deployed on Netlify) where annotators rate the
-          generated QA pairs, with every judgment stored in Supabase for analysis. I then
-          analyzed the judgments collected over the supported training videos to validate
-          the evaluation rubric itself.
+          I brought in the Teepa Snow dementia-care videos and grew the dataset with Whisper transcription. I added seeding, temperature and decoding controls so we compare pipelines fairly, and labeled the topics with BERTopic and a group of 9 LLMs.
+        </p>
+        <p>
+          For evaluation, I built a panel of LLM judges (vLLM on the university's GPU cluster plus hosted APIs) and checked it against human raters with Fleiss' kappa, Gwet's AC1 and Krippendorff's alpha. I also co-built the annotation site (JavaScript and Supabase) where people rate the generated pairs.
         </p>
       </div>
 
       <div class="card" id="rpanel-mcminer" role="tabpanel" aria-labelledby="rtab-mcminer">
-        <h3>McMiner — Misconception Mining for LLM Code Tutoring</h3>
+        <h3>McMiner-in-the-Loop: Misconception-Aware Code Tutoring</h3>
         <p class="meta">Graduate research with the AIM Lab, Santa Clara University · Catherine Awad, Ruiwen Guan, Hanieh Hedayati (Advisor: Dr. Oana Ignat)</p>
-        <p class="tags"><span>LLMs</span><span>Misconception Mining</span><span>pass@k</span><span>EvoCodeBench</span><span>Python</span></p>
+        <p class="tags"><span>LLMs</span><span>PyTorch</span><span>LoRA</span><span>DPO</span><span>GRPO</span><span>pass@k</span><span>EvoCodeBench</span><span>DevEval</span></p>
         <p>
-          Traditional LLM code tutors suffer from over-tutoring (giving away answers too early)
-          or vague hinting that wastes rounds. McMiner addresses this by introducing an active,
-          "misconception-in-the-loop" diagnostic framework: the tutor poses diagnostic code
-          scenarios, mines the student's specific underlying error pattern, and batch-injects
-          the misconception into subsequent prompt context so every hint directly targets the root flaw.
+          Two existing systems each do half the job. TRAVER is a tutor that talks to students but can't tell what they misunderstand. McMiner finds misconceptions from code but doesn't tutor. We connected them: every round, the student's misconception goes into the tutor's next prompt so the hint can target it. We tested mined, class-level and true (oracle) misconceptions with two tutors on EvoCodeBench and DevEval.
         </p>
         <p>
-          Evaluated using pass@1/5/10 across task difficulty tiers on the EvoCodeBench benchmark,
-          McMiner achieved significant accuracy gains — boosting Easy tasks (+9.4% pass@1) and
-          High-level student models (+5.2% pass@5) while reducing overall hint rounds needed to reach correct solutions.
+          It didn't help. Using pass@k, paired sign tests and bootstrap confidence intervals, none of the versions beat the tutor with no misconceptions, even when we gave it the true ones. When we checked the miner's reports during tutoring, most of them were wrong.
         </p>
         <p>
-          To run multi-round benchmark evaluations, a fault-tolerant GPU harness was built with auto-pause/resume controls across server outages. An interactive side-by-side dialogue replay web app was also developed, featuring a live mode for running fresh sessions against real LLM APIs.
+          On the training side, our LoRA reward models and a DPO tutor stayed close to chance at ranking tutor replies. I also implemented GRPO with a sandboxed unit test reward and raised Qwen2.5-Coder-1.5B's MBPP pass@1 from 0.50 to 0.57 (p&nbsp;&lt;&nbsp;0.001), with KL, dynamic sampling and reward poisoning ablations.
+        </p>
+        <p>
+          To run the long multi-round evaluations, we built a GPU harness that pauses and resumes when the server goes down, and a web app that replays baseline and McMiner dialogues side by side, with a live mode that runs new sessions against real LLM APIs.
         </p>
         <p class="repo-link">
-          <a href="https://mcminer-coding-tutor.netlify.app" rel="noopener" target="_blank">Live demo — baseline vs. McMiner dialogues →</a><br>
-          <a href="assets/mcminer-poster.pdf" rel="noopener" target="_blank">Open poster (PDF) →</a><br>
+          <a href="https://mcminer-coding-tutor.netlify.app" rel="noopener" target="_blank">Live demo: baseline vs. McMiner dialogues →</a><br>
+          <a href="assets/mcminer-poster.pdf" rel="noopener" target="_blank">Poster with early results (PDF) →</a><br>
           <a href="https://github.com/SCU-CSEN346/Tutor-Agents" rel="noopener" target="_blank">Code &amp; full write-up on GitHub →</a>
         </p>
         <details class="embed-details">
           <summary class="embed-summary">
-            <span>Research Poster (PDF)</span>
+            <span>Research Poster, Early Results (PDF)</span>
             <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
           </summary>
           <div class="embed-container">
-            <iframe src="assets/mcminer-poster.pdf" width="100%" height="560" loading="lazy" title="McMiner Research Poster PDF"></iframe>
+            <iframe src="assets/mcminer-poster.pdf" width="100%" height="560" loading="lazy" title="McMiner Research Poster, early results, PDF"></iframe>
           </div>
         </details>
         <details class="embed-details">
@@ -369,37 +180,33 @@
         </details>
       </div>
 
+      <div class="card" id="rpanel-edgepose" role="tabpanel" aria-labelledby="rtab-edgepose">
+        <h3>Can a Phone Replace the GPU? On-Device 3D Pose for Movement Coaching</h3>
+        <p class="meta">Santa Clara University · ongoing (interim results, Nov 2026)</p>
+        <p class="tags"><span>3D Human Pose Estimation</span><span>Model Distillation</span><span>Edge ML / ONNX</span><span>Benchmarking</span><span>SAM 3D Body</span><span>Slurm HPC</span><span>Python</span></p>
+        <p>
+          <a href="#htab-simon">Simon</a> compares a follower's movement to a trainer's 3D recording. Right now every take runs SAM 3D Body on a cloud GPU, which costs money and means uploading the video. I'm testing if a model small enough for a phone can handle the follower's side, and how to tell if it's good enough. Joint error isn't the real test. The real test is whether the person still gets the same feedback.
+        </p>
+        <p>
+          I built the benchmark: 27 clips across nine movement types, with SAM 3D Body reference poses generated on the university's GPU cluster. I ran phone-sized models against it: InstantHMR (a recent phone mesh model by other authors) and Google's BlazePose GHUM in three sizes. Every output goes through Simon's own fault analysis, so I compare the actual coaching (which faults get flagged, the score, the grade) and not just joint positions. I've also started building a training set from licence-cleared data (Harmony4D and permissively licensed COCO images) labeled with SAM 3D Body.
+        </p>
+        <p>
+          So far, InstantHMR passed Simon's joint accuracy bar on 24 of 27 clips (median 5.5&nbsp;cm from SAM 3D Body, 22&nbsp;ms a frame on a laptop CPU). But it gave the exact same faults on only 1 of 18 follower takes (fault F1 around 0.50), and it struggled most with floor and seated poses. BlazePose passed the joint bar on 4 of 27 clips at most. The takeaway: passing the usual joint accuracy bar doesn't mean the feedback stays the same, so feedback agreement should be the measure. Next I'll fine-tune the phone model and judge it on that.
+        </p>
+      </div>
+
       <div class="card" id="rpanel-anomaly" role="tabpanel" aria-labelledby="rtab-anomaly">
         <h3>Medical Anomaly Detection with Vision-Language Models</h3>
-        <p class="meta">Four-person team project</p>
-        <p class="tags"><span>CLIP</span><span>MVFA</span><span>LoRA</span><span>PyTorch</span></p>
+        <p class="meta">Course project · team of four</p>
+        <p class="tags"><span>CLIP</span><span>MVFA</span><span>PyTorch</span><span>Few-shot learning</span></p>
         <p>
-          Labeled medical imaging data is scarce, so we asked how much anomaly-detection
-          performance a general vision-language model can deliver on chest X-rays with only
-          a handful of labeled examples. We implemented and extended the MVFA (Multi-level
-          Visual Feature Adaptation) framework on top of CLIP (ViT-L/14): images and medical
-          text prompts are embedded into a shared space, and anomaly scores come from
-          comparing image features against descriptions of normal and abnormal findings.
-          Experiments ran on the RSNA pneumonia dataset (~29k chest radiographs, filtered
-          to a 17k-image benchmark), evaluated with AUROC across zero-shot and
-          2/4/8/16-shot regimes.
+          Labeled medical images are hard to get, so we wanted to see how well a general vision-language model can find anomalies in chest X-rays with only a few labeled examples. We built on MVFA (Multi-level Visual Feature Adaptation) on top of CLIP (ViT-L/14). Images and medical text prompts go into the same space, and the anomaly score comes from comparing an image to descriptions of normal and abnormal findings. We used the RSNA pneumonia dataset (about 29k chest X-rays, filtered to 17k) and measured AUROC from zero-shot up to 16 shots.
         </p>
         <p>
-          We ran sixteen controlled configurations to isolate what actually helps under
-          scarce supervision: adapter regularization, medical-domain prompt ensembling,
-          LoRA injected into the final ViT blocks, a lightweight MLP that regresses anomaly
-          scores directly from visual features, and a calibrated three-score fusion of
-          cosine similarity, Mahalanobis distance, and energy scoring. My focus was the
-          scoring side — implementing the anomaly-scoring methods and improving performance
-          through score fusion and regularization.
+          We tried sixteen setups, comparing scoring heads (including a small MLP that scores straight from image features), adapter regularization, medical prompt ensembles, and combining cosine similarity, Mahalanobis distance and energy scores. I worked on the scoring side: the scoring methods, the score fusion and the regularization.
         </p>
         <p>
-          The experiments revealed a clean scaling picture: heavy regularization wins at
-          2-shot, learned score fusion at 4-shot, and direct MLP scoring dominates from
-          8-shot up — peaking at 0.884 AUROC at 16-shot, ahead of the original MVFA paper's
-          reported results. All experiments ran on NVIDIA V100s on the university's WAVE
-          HPC cluster, so there is no public repo; the report below holds the full
-          experiment matrix.
+          Everything ran on V100 GPUs on the university's WAVE cluster, so there's no public repo. The full results are in the report below.
         </p>
         <details class="embed-details">
           <summary class="embed-summary">
@@ -417,16 +224,10 @@
         <p class="meta">B.S. graduation thesis (team of six), Alexandria University · 2019</p>
         <p class="tags"><span>Tacotron&nbsp;2</span><span>Speech Synthesis</span><span>Deep Learning</span></p>
         <p>
-          A neural text-to-speech system that generates speech in the voice of different
-          speakers — including speakers never seen during training. The system consists of
-          three separately trained models built around a Tacotron 2 synthesizer: it takes
-          text plus a reference voice and produces speech in that voice. We also built a
-          simple app to interact with the model.
+          A text-to-speech system that speaks in different people's voices, including voices it never saw in training. It's three separately trained models around a Tacotron 2 synthesizer: you give it text and a sample of a voice, and it says the text in that voice. We also built a simple app to try it.
         </p>
         <p>
-          Beyond the English models, we added an Egyptian-dialect Arabic dataset and
-          fine-tuned the system to generate realistic Arabic speech — a language where
-          dialectal TTS training resources are scarce. Expand below to view presentation slides and thesis report.
+          On top of the English models, we added an Egyptian Arabic dataset and fine-tuned the system to speak realistic Arabic, which has very little dialect training data. The slides and the thesis are below.
         </p>
         <details class="embed-details">
           <summary class="embed-summary">
@@ -452,6 +253,306 @@
     </div>
   </section>
 
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects">
+    <div class="wrap">
+      <h2>Projects</h2>
+      <p class="section-hint">Hover over a project or scroll the row to see more.</p>
+    </div>
+
+    <div class="stage" id="projects-stage">
+      <div class="shelf" id="projects-shelf" role="tablist" aria-label="Projects">
+        <button class="tile" type="button" role="tab" id="tab-nextrx" aria-controls="panel-nextrx" aria-selected="true">
+          <img src="assets/logos/nextrx.png" alt="" width="130" height="130" draggable="false">
+          <span class="tile-name">NextRx</span>
+        </button>
+        <button class="tile" type="button" role="tab" id="tab-volunteer" aria-controls="panel-volunteer" aria-selected="false">
+          <img src="assets/logos/volunteer.png" alt="" width="130" height="130" draggable="false">
+          <span class="tile-name">Volunteer Service App</span>
+        </button>
+        <button class="tile" type="button" role="tab" id="tab-incidentaid" aria-controls="panel-incidentaid" aria-selected="false">
+          <img src="assets/logos/incidentaid.png" alt="" width="130" height="130" draggable="false">
+          <span class="tile-name">IncidentAid</span>
+        </button>
+        <button class="tile" type="button" role="tab" id="tab-ha" aria-controls="panel-ha" aria-selected="false">
+          <img src="assets/logos/ha-mark.svg" alt="" width="130" height="130" draggable="false">
+          <span class="tile-name">Hydration Automation</span>
+        </button>
+        <button class="tile" type="button" role="tab" id="tab-beyondlist" aria-controls="panel-beyondlist" aria-selected="false">
+          <img src="assets/logos/beyondlist.png" alt="" width="130" height="130" draggable="false">
+          <span class="tile-name">BeyondList</span>
+        </button>
+        <button class="tile" type="button" role="tab" id="tab-frona" aria-controls="panel-frona" aria-selected="false">
+          <img src="assets/logos/frona.png" alt="" width="130" height="130" draggable="false">
+          <span class="tile-name">Frona</span>
+        </button>
+      </div>
+      <div class="panels wrap" id="projects-panels">
+
+    <article class="project" id="panel-nextrx" role="tabpanel" aria-labelledby="tab-nextrx">
+      <div class="project-info">
+        <h3>NextRx: Medication Reminder App</h3>
+        <p class="meta">Solo project · On Google Play · iOS in TestFlight</p>
+        <p class="tags"><span>React Native / Expo</span><span>TypeScript</span><span>Supabase</span></p>
+        <p>
+          A medication reminder app I built on my own. It's on Google Play, and iOS is in TestFlight. Reminders use the phone's own alarm system, so they go off on time even when the app is closed, and you can mark a dose as taken right from the notification.
+        </p>
+        <p>
+          It keeps track of how many tablets are left in the box, keeps your dose history, and works in English, Spanish and Arabic (fully right to left). Your data stays on your phone. You can scan a pharmacy label with the camera or a photo to fill in the medication, sign in with a magic link if you want, and the notifications are privacy-safe.
+        </p>
+        <p class="repo-link">
+          <a href="https://next-rx.com" rel="noopener" target="_blank">Visit next-rx.com →</a>
+        </p>
+      </div>
+      <div class="shots">
+        <img src="assets/nextrx/01-home.png" alt="NextRx home: every dose in order, with one tap to mark it taken and tablets left" loading="lazy">
+        <img src="assets/nextrx/02-dose.png" alt="NextRx dose screen showing what's left in the box, with Take it, Remind me later, and Skip" loading="lazy">
+        <img src="assets/nextrx/03-shade.png" alt="NextRx reminder in the Android notification shade with Done, Later, and Skip actions" loading="lazy">
+        <img src="assets/nextrx/04-history.png" alt="NextRx dose history filtered by time range and medication" loading="lazy">
+        <img src="assets/nextrx/05-welcome.png" alt="NextRx welcome screen: never miss a dose" loading="lazy">
+        <img src="assets/nextrx/06-home-ar.png" alt="NextRx home screen in Arabic, fully right-to-left" loading="lazy">
+      </div>
+    </article>
+
+    <article class="project" id="panel-volunteer" role="tabpanel" aria-labelledby="tab-volunteer">
+      <div class="project-info">
+        <h3>Volunteer Service Management App</h3>
+        <p class="meta">Solo project · Live on Google Play</p>
+        <p class="tags"><span>Flutter</span><span>Firebase</span><span>Riverpod</span><span>Cloud Functions</span></p>
+        <p>
+          I built this on my own, from scratch, for the volunteer organization I work with in Egypt. It keeps the records of the visually impaired and elderly people we serve, plus the volunteers, groups and announcements, in Arabic and English.
+        </p>
+        <p>
+          It has role-based access with admin approval, audit logs, push notifications that follow each person's timezone (FCM and Cloud Functions), and compressed, cached images on Firebase. The Arabic version is fully right to left and was built in from the start, not added later.
+        </p>
+      </div>
+      <div class="shots">
+        <img src="assets/volunteer/01_login_en.png" alt="Volunteer app login screen in English" loading="lazy">
+        <img src="assets/volunteer/02_login_ar.png" alt="Volunteer app login screen in Arabic, fully right-to-left" loading="lazy">
+        <img src="assets/volunteer/04_add_person_dark.png" alt="Add Person form in dark mode with bilingual group chips" loading="lazy">
+        <img src="assets/volunteer/05_add_person_ar.png" alt="Add Person form in Arabic, fully right-to-left, dark mode" loading="lazy">
+        <img src="assets/volunteer/06_roles.png" alt="Role selection: admin, moderator, head, regular" loading="lazy">
+      </div>
+      <figure class="demo">
+        <img src="assets/volunteer/07_tablet_dashboard.png" alt="Admin dashboard on a tablet showing the service groups grid" loading="lazy">
+        <figcaption>
+          The admin dashboard on a tablet. The same code adapts to bigger screens, with service groups organizing the people we serve.
+        </figcaption>
+      </figure>
+    </article>
+
+    <article class="project" id="panel-incidentaid" role="tabpanel" aria-labelledby="tab-incidentaid">
+      <div class="project-info">
+        <h3>IncidentAid</h3>
+        <p class="meta">EPIC Lab, Santa Clara University · Emergency response app</p>
+        <p class="tags"><span>Flutter</span><span>Firebase</span><span>Riverpod</span><span>Google Maps</span><span>BLE</span></p>
+        <p>
+          An app for firefighters to report incidents and coordinate the response, built at Santa Clara University's EPIC Lab. I'm the primary lead developer on it.
+        </p>
+        <p>
+          It used to be separate native apps. I rebuilt it as one cross-platform Flutter app and redesigned it: a new UI/UX designed in Figma, Riverpod for state, a repository layer for data, a move from Firebase Realtime Database to Firestore, and dashboards and navigation based on each person's role. I also added Google Maps/Places, BLE beacon scanning and real-time alerts, with separate prod and dev Firebase environments.
+        </p>
+      </div>
+      <div class="shots">
+        <img src="assets/incidentaid/03_captain_dashboard_home.png" alt="IncidentAid captain dashboard with station readiness and active incidents" loading="lazy">
+        <img src="assets/incidentaid/04_crew_tab.png" alt="IncidentAid crew management tab" loading="lazy">
+        <img src="assets/incidentaid/01_login.png" alt="IncidentAid login screen" loading="lazy">
+      </div>
+      <figure class="demo">
+        <video controls preload="none" playsinline poster="assets/incidentaid/demo_poster.jpg">
+          <source src="assets/incidentaid/demo.mp4" type="video/mp4">
+        </video>
+        <figcaption>
+          Two-minute demo: PAR check-ins and Mayday alerts showing up live on an iPhone simulator, an Android phone and a command tablet, all on the same backend.
+        </figcaption>
+      </figure>
+    </article>
+
+    <article class="project" id="panel-ha" role="tabpanel" aria-labelledby="tab-ha">
+      <div class="project-info">
+        <h3>Hydration Automation</h3>
+        <p class="meta">EPIC Lab, Santa Clara University · Farm IoT platform</p>
+        <p class="tags"><span>Flutter</span><span>Node.js/Express</span><span>Arduino&nbsp;C++</span><span>LoRa</span><span>NFC</span><span>Google Maps</span><span>PostHog</span></p>
+        <p>
+          An IoT platform for monitoring agricultural hydration systems in real time, built at Santa Clara University's EPIC Lab.
+        </p>
+        <p>
+          <strong>App:</strong> I built the Flutter app: live sensor dashboards with a farm health score, magic link sign-in, and translations with dark mode. Farmers set up a farm by putting it on a map and drawing the field's edge, either by tapping or by walking it with the phone's GPS. They add devices by scanning the printed labels (QR, with NFC to identify a unit), and can rename stations and sensors, move them between farms, release them, or save their install location from the phone's GPS. Sign-up is invite only, with a "Get a device" page instead.
+        </p>
+        <p>
+          <strong>Firmware &amp; backend:</strong> I built the SAMD21/LoRa firmware in Arduino C++: uploads that wait for an acknowledgement and get batched, an offline queue, NTP-synced clocks, device whitelists refreshed over the air, battery telemetry, and rejecting data from units that aren't on the list. I co-developed the Node.js/Express backend: claiming devices with hashed label tokens that rotate, ownership checks, farm boundaries, batched IoT uploads, a simulated test fleet, and PostHog feature flags.
+        </p>
+        <p>
+          I also built the public website (two languages, light and dark themes) and set up the CI pipeline, commit hooks, design system checks and integration docs the team works from. Everything goes through reviewed pull requests.
+        </p>
+        <p class="repo-link">
+          <a href="https://hydrationautomation.com" rel="noopener" target="_blank">Visit hydrationautomation.com →</a>
+        </p>
+      </div>
+      <div class="shots">
+        <img src="assets/ha/03_dashboard_light.png" alt="Hydration Automation dashboard with farm map and moisture gauge" loading="lazy">
+        <img src="assets/ha/04_dashboard_stats_light.png" alt="Dashboard metric tiles: temperature, humidity, soil moisture, stations online" loading="lazy">
+        <img src="assets/ha/05_stations_light.png" alt="Stations list with live sensor telemetry" loading="lazy">
+        <img src="assets/ha/06_dashboard_dark.png" alt="Dashboard in dark mode" loading="lazy">
+        <img src="assets/ha/07_stations_dark.png" alt="Stations list in dark mode" loading="lazy">
+        <img src="assets/ha/01_signin.png" alt="Hydration Automation sign-in screen" loading="lazy">
+      </div>
+      <figure class="demo demo-duo">
+        <img src="assets/ha/mac_dashboard_light.png" alt="Hydration Automation macOS desktop app, light theme" loading="lazy">
+        <img src="assets/ha/mac_dashboard_dark.png" alt="Hydration Automation macOS desktop app, dark theme" loading="lazy">
+        <figcaption>
+          The same Flutter code runs as a macOS desktop app with a wide screen layout, shown here in light and dark themes.
+        </figcaption>
+      </figure>
+    </article>
+
+    <article class="project" id="panel-beyondlist" role="tabpanel" aria-labelledby="tab-beyondlist">
+      <div class="project-info">
+        <h3>BeyondList</h3>
+        <p class="meta">Personal project · Real-time shared lists</p>
+        <p class="tags"><span>Flutter</span><span>Firebase</span><span>Spring Boot</span><span>OAuth2/JWT</span><span>PostgreSQL</span><span>Docker</span></p>
+        <p>
+          Shared shopping lists and expenses for roommates and families, updated in real time.
+        </p>
+        <p>
+          <strong>Two backends:</strong> I started with Flutter and Firebase (Firestore real-time listeners, Bloc/Cubit for state, push notifications), then moved the data to a Java <strong>Spring Boot API</strong> with <strong>Spring Security (OAuth2 / JWT)</strong>, Spring Data JPA, <strong>PostgreSQL</strong> with Flyway migrations, Docker and CI.
+        </p>
+        <p class="repo-link"><a href="https://github.com/c-awad/beyond_list" rel="noopener" target="_blank">View source on GitHub →</a></p>
+      </div>
+      <div class="shots">
+        <img src="assets/beyondlist/04_home.png" alt="BeyondList home screen with shopping lists" loading="lazy">
+        <img src="assets/beyondlist/02_list_items.png" alt="BeyondList grocery list with items and quantities" loading="lazy">
+        <img src="assets/beyondlist/03_list_checked.png" alt="BeyondList list with checked-off items" loading="lazy">
+        <img src="assets/beyondlist/01_login.png" alt="BeyondList login screen" loading="lazy">
+      </div>
+    </article>
+
+    <article class="project" id="panel-frona" role="tabpanel" aria-labelledby="tab-frona">
+      <div class="project-info">
+        <h3>Frona: Diet &amp; Fitness App</h3>
+        <p class="meta">Frona Tech · Released on the App Store &amp; Google Play</p>
+        <p class="tags"><span>Flutter</span><span>Scala</span><span>gRPC</span><span>AWS</span><span>Docker</span><span>PostgreSQL</span></p>
+        <p>
+          I co-founded Frona Tech and was the lead software engineer. We built a diet and fitness app for Android and iOS and took it from the first architecture to release on the <strong>App Store</strong> and <strong>Google Play</strong>.
+        </p>
+        <p>
+          <strong>Features:</strong> a diet and macro engine (Keto and Paleo, with barcode scanning), a workout trainer mode (supersets, rest timers and lift progress graphs), and sharing plans from influencers.
+        </p>
+        <p>
+          <strong>Stack:</strong> <strong>Flutter</strong> apps on top of <strong>Scala microservices</strong> talking over <strong>gRPC</strong>, running in <strong>Docker</strong> on <strong>AWS</strong>.
+        </p>
+      </div>
+      <div class="shots">
+        <img src="assets/frona/01_onboarding.png" alt="Frona app onboarding screen" loading="lazy">
+        <img src="assets/frona/02_home.png" alt="Frona app home dashboard" loading="lazy">
+        <img src="assets/frona/03_tracker.png" alt="Frona app fitness tracking" loading="lazy">
+        <img src="assets/frona/04_analytics.png" alt="Frona app activity analytics" loading="lazy">
+        <img src="assets/frona/05_profile.png" alt="Frona app user profile" loading="lazy">
+      </div>
+    </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HACKATHONS ============ -->
+  <section id="hackathons">
+    <div class="wrap">
+      <h2>Hackathons</h2>
+      <p class="section-hint">Hover over a project or scroll the row to see more.</p>
+    </div>
+
+    <div class="stage" id="hackathons-stage">
+      <div class="shelf" role="tablist" aria-label="Hackathon projects">
+        <button class="tile tile-text" type="button" role="tab" id="htab-mantisgrid" aria-controls="hpanel-mantisgrid" aria-selected="true">
+          <span class="tile-award">Best Solution</span>
+          <span class="tile-name">MantisGrid</span>
+          <span class="tile-sub">GPU queues &amp; root causes</span>
+        </button>
+        <button class="tile tile-text" type="button" role="tab" id="htab-simon" aria-controls="hpanel-simon" aria-selected="false">
+          <span class="tile-name">Simon</span>
+          <span class="tile-sub">AI movement coaching</span>
+        </button>
+        <button class="tile tile-text" type="button" role="tab" id="htab-tourniquet" aria-controls="hpanel-tourniquet" aria-selected="false">
+          <span class="tile-name">Tourniquet</span>
+          <span class="tile-sub">Guardrail for AI agents</span>
+        </button>
+      </div>
+      <div class="panels wrap">
+
+      <div class="card" id="hpanel-mantisgrid" role="tabpanel" aria-labelledby="htab-mantisgrid">
+        <h3>GPU Cluster Analysis: Shorter Queues and Root Causes</h3>
+        <p class="meta">MantisGrid AI Hackathon 2026 · <span class="award">Best Solution, Track 2</span></p>
+        <p class="tags"><span>Scheduler simulation</span><span>Slurm</span><span>Root-cause analysis</span><span>Python</span><span>pandas</span><span>Docker</span></p>
+        <p>
+          We were given a $1.49M GPU cluster bill. Most teams focused on cutting the cost. We asked something else: why are researchers stuck in the queue when the cluster is mostly idle, and what's really causing the failures behind the bill?
+        </p>
+        <p>
+          <strong>The queue was a quota problem, not a hardware problem.</strong> I built a scheduler simulator and replayed all 74,838 jobs that could start. In 90% of waits longer than an hour, the researcher had already hit their own limit on running jobs, while a median of 287 out of 450 GPUs were free. Letting people go past their limit while the cluster is under 70% used, plus ending allocations that sit idle for an hour, cut the modeled waiting from 1,326 to 59 person-hours. That's 96% less, with no new hardware. Reordering the queue didn't help, because the scheduler was already close to first come, first served, with backfill working.
+        </p>
+        <p>
+          <strong>A safer option using prediction.</strong> Letting people go past their limit only reacts after the fact, so we also tried a credits pool: when a researcher is away, they lend their unused quota for a limited time. Based on the limits people requested, it did nothing, because they asked for about 2,000 times more than they used. Based on each person's predicted runtime (their past p90), it cut waiting by 11%, or 21% with the idle timeout, and lenders were only blocked for 4.3 researcher-hours over 18 weeks. Predicting each person's quota from their recent demand didn't work. Demand was too bursty and waiting went up.
+        </p>
+        <p>
+          <strong>Root causes, not symptoms.</strong> The API said to take down the five machines with the most findings. When we traced those findings through its causal graph, the problem was one broken Slurm array script, not five broken machines. A 121-machine "incident" came down to one storage volume. The one machine that was actually broken ranked 21st by number of findings. We found it by checking which crashes followed the machine and not the user (SIGBUS, three unrelated users), and it could have been caught six days earlier.
+        </p>
+        <p>
+          Then the cost: about $359K could be saved ($202K to $491K), mostly from GPUs that were allocated but never used. Taking those back first, before cutting capacity, keeps the queues from getting worse. I built the analysis pipeline, the scheduler simulator and the CFO dashboard, where a slider steps through precomputed replays of the quota options.
+        </p>
+        <p class="repo-link">
+          <a href="https://lnkd.in/p/gRW7U6KE" rel="noopener" target="_blank">Read the LinkedIn post about the win →</a>
+        </p>
+        <figure class="demo award-photo">
+          <img src="assets/mantisgrid-award.jpg" alt="Catherine and her teammate on stage accepting the Best Solution, Track 2 check at the MantisGrid AI Hackathon 2026" loading="lazy">
+          <figcaption>Accepting the Best Solution, Track 2 award with my teammate, as team PrayingMantis.</figcaption>
+        </figure>
+      </div>
+
+      <div class="card" id="hpanel-simon" role="tabpanel" aria-labelledby="htab-simon">
+        <h3>Simon: AI Movement Coaching App</h3>
+        <p class="meta">Meta Global AI Developer Hackathon 2026 · team of three</p>
+        <p class="tags"><span>SAM 3.1</span><span>SAM 3D Body</span><span>Modal</span><span>Python</span></p>
+        <p>
+          A trainer records a movement once, a follower records their try, and Simon compares the two in 3D and tells them what was different in plain words ("left foot too far out"). It uses 11 Meta models and it's live as a web app.
+        </p>
+        <p>
+          I built the multi-person 3D tracking and the fault analysis and scoring engine, moved the GPU work to Modal serverless (about 40 seconds per take instead of 2 to 3 minutes), and coordinated the releases and the submission for the judges.
+        </p>
+        <p class="repo-link">
+          <a href="https://simon.live" rel="noopener" target="_blank">Try it live on simon.live →</a>
+        </p>
+        <figure class="demo demo-embed">
+          <div class="video-frame">
+            <iframe src="https://www.youtube-nocookie.com/embed/U__ihF5UX-Y" title="Simon official hackathon submission demo" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <figcaption>Our official hackathon submission demo.</figcaption>
+        </figure>
+        <figure class="demo demo-portrait">
+          <video controls preload="none" playsinline poster="assets/simon/demo_poster.jpg">
+            <source src="assets/simon/demo.mp4" type="video/mp4">
+          </video>
+          <figcaption>
+            A 90-second walkthrough on a phone-sized test build: a trainer records a knee raise, a follower records the same move, and Simon shows the 3D comparison, timed notes and the score.
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="card" id="hpanel-tourniquet" role="tabpanel" aria-labelledby="htab-tourniquet">
+        <h3>Tourniquet: Guardrail for AI Agents</h3>
+        <p class="meta">CrowdStrike × SCU AI Hackathon 2026 · team of three</p>
+        <p class="tags"><span>AI agent security</span><span>Prompt injection</span><span>Node.js</span><span>Docker</span></p>
+        <p>
+          Tourniquet sits between an AI agent and its model and tools, and stops prompt injection from leaking data or misusing tools. I built OpsBot, a test support agent that we attacked with direct and indirect prompt injection.
+        </p>
+        <p>
+          OpsBot has layers of defense: the team's proxy and outbound traffic guard, plus OpsBot's own permissions per request, which I built. I also built the live results deck and dashboard, and presented our pitch.
+        </p>
+      </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- ============ EXPERIENCE & EDUCATION ============ -->
   <section id="experience" class="wrap">
     <h2>Experience</h2>
@@ -460,15 +561,15 @@
         <div class="timeline-dot"></div>
         <div class="timeline-card">
           <div class="timeline-header">
-            <h3 class="timeline-title">AI Research Assistant <span class="timeline-org">— AIM Lab, Santa Clara University</span></h3>
+            <h3 class="timeline-title">AI Research Assistant <span class="timeline-org">· AIM Lab, Santa Clara University</span></h3>
             <span class="timeline-badge">May 2026 – Present</span>
           </div>
           <p class="timeline-desc">
-            Researching LLM generation and evaluation systems for dementia-caregiver QA benchmarks and misconception-in-the-loop programming tutors.
+            Working on how to generate useful LLM outputs and how to evaluate them properly, for dementia caregiver Q&amp;A and code tutoring.
           </p>
           <ul class="timeline-bullets">
-            <li>Built fault-tolerant GPU evaluation harnesses on EvoCodeBench across multi-hour outage risks.</li>
-            <li>Developed human-annotation web tools (React/Vite + Supabase) for rating generated QA pairs.</li>
+            <li>Building <strong>MedicalQA</strong>, an LLM system that turns dementia-care videos into caregiver Q&amp;A, by extending the lab's MentorQA framework, and checking how well LLM judges and human ratings evaluate it.</li>
+            <li>Co-developed <strong>McMiner-in-the-Loop</strong>, which gives an LLM tutor the student's misconception before its next hint. We tested it on two code benchmarks with two tutors and found it doesn't reliably help.</li>
           </ul>
         </div>
       </div>
@@ -477,15 +578,15 @@
         <div class="timeline-dot"></div>
         <div class="timeline-card">
           <div class="timeline-header">
-            <h3 class="timeline-title">Software Engineering Research Assistant <span class="timeline-org">— EPIC Lab, Santa Clara University</span></h3>
+            <h3 class="timeline-title">Software Engineering Research Assistant <span class="timeline-org">· EPIC Lab, Santa Clara University</span></h3>
             <span class="timeline-badge">2025 – Present</span>
           </div>
           <p class="timeline-desc">
-            Developing real-time IoT and emergency-response platforms for agricultural and first-responder applications.
+            Building real-time IoT and emergency response apps for farms and firefighters.
           </p>
           <ul class="timeline-bullets">
-            <li>Lead developer on <strong>Hydration Automation</strong> (Flutter, Node.js/Express, LoRa, NFC, Arduino C++).</li>
-            <li>Primary engineer on <strong>IncidentAid</strong> (Flutter, Firebase, BLE beacon tracking, offline map tiling).</li>
+            <li>Developing <strong>Hydration Automation</strong> across the Flutter app, the Node.js/Express backend and the Arduino/C++ firmware. I set up the CI pipeline, commit hooks, design system checks and integration docs the team works from.</li>
+            <li>Rebuilding <strong>IncidentAid</strong> from its old native apps into one cross-platform Flutter app, with a new UI/UX designed in Figma, Riverpod for state and role-based dashboards.</li>
           </ul>
         </div>
       </div>
@@ -494,15 +595,15 @@
         <div class="timeline-dot"></div>
         <div class="timeline-card">
           <div class="timeline-header">
-            <h3 class="timeline-title">Co-Founder &amp; Lead Engineer <span class="timeline-org">— Frona Tech, Egypt</span></h3>
-            <span class="timeline-badge">2021 – 2023</span>
+            <h3 class="timeline-title">Co-Founder &amp; Lead Engineer <span class="timeline-org">· Frona Tech, Egypt</span></h3>
+            <span class="timeline-badge">July 2021 – Dec 2023</span>
           </div>
           <p class="timeline-desc">
-            Co-founded a mobile technology startup and led product development from concept to store deployment.
+            Co-founded a mobile startup and led the product from idea to the app stores.
           </p>
           <ul class="timeline-bullets">
-            <li>Managed a team of four engineers across mobile frontend, backend APIs, and UI/UX design.</li>
-            <li>Built cross-platform Flutter applications published live on Google Play &amp; App Store.</li>
+            <li>Led a team of four engineers building <strong>Frona</strong>, a diet and fitness app for Android and iOS to plan meals and workouts and track calories, macros and workouts.</li>
+            <li>Took it from idea to release on the App Store and Google Play (Scala, gRPC, Flutter, AWS, Docker).</li>
           </ul>
         </div>
       </div>
@@ -511,14 +612,14 @@
         <div class="timeline-dot"></div>
         <div class="timeline-card">
           <div class="timeline-header">
-            <h3 class="timeline-title">Teaching Assistant <span class="timeline-org">— Alexandria University</span></h3>
-            <span class="timeline-badge">2019 – 2020</span>
+            <h3 class="timeline-title">Teaching Assistant <span class="timeline-org">· Alexandria University</span></h3>
+            <span class="timeline-badge">Sept 2019 – Jan 2020</span>
           </div>
           <p class="timeline-desc">
-            Taught undergraduate Computer Science classes and led weekly laboratory sessions.
+            Taught undergraduate computer science classes and ran weekly labs.
           </p>
           <ul class="timeline-bullets">
-            <li>Conducted lab sessions for <em>Programming in C/C++</em>, <em>Design &amp; Analysis of Algorithms</em>, and <em>Operating Systems</em>.</li>
+            <li>Ran labs for <em>Programming 1</em>, <em>Design of Algorithms</em> and <em>Operating Systems</em>.</li>
           </ul>
         </div>
       </div>
@@ -530,11 +631,11 @@
         <div class="timeline-dot"></div>
         <div class="timeline-card">
           <div class="timeline-header">
-            <h3 class="timeline-title">M.S. Computer Science &amp; Engineering <span class="timeline-org">— Santa Clara University</span></h3>
+            <h3 class="timeline-title">M.S. Computer Science &amp; Engineering <span class="timeline-org">· Santa Clara University</span></h3>
             <span class="timeline-badge">Jan 2025 – Dec 2026 (exp.)</span>
           </div>
           <p class="timeline-desc">
-            GPA: <strong>3.87</strong> · Focus on AI/LLM Systems, Mobile Software Engineering, and IoT. Directed research with AIM Lab &amp; EPIC Lab.
+            GPA: <strong>3.87</strong> · Focus on AI and LLM systems, mobile software engineering and IoT. Research with AIM Lab and EPIC Lab.
           </p>
         </div>
       </div>
@@ -543,11 +644,11 @@
         <div class="timeline-dot"></div>
         <div class="timeline-card">
           <div class="timeline-header">
-            <h3 class="timeline-title">B.S. Computer &amp; Communications Engineering <span class="timeline-org">— Alexandria University</span></h3>
+            <h3 class="timeline-title">B.S. Computer &amp; Communications Engineering <span class="timeline-org">· Alexandria University</span></h3>
             <span class="timeline-badge">2019</span>
           </div>
           <p class="timeline-desc">
-            Graduation Thesis: Neural Text-to-Speech &amp; Voice Imitation using deep learning and Tacotron 2.
+            Graduation thesis: text-to-speech and voice imitation with deep learning and Tacotron 2.
           </p>
         </div>
       </div>
@@ -560,11 +661,21 @@
     <div class="skills-grid">
       <div class="skill-card">
         <div class="skill-card-header">
+          <svg class="skill-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          <h3>AI &amp; Machine Learning</h3>
+        </div>
+        <div class="skill-tags">
+          <span>LLMs &amp; RAG</span><span>Deep Learning</span><span>NLP</span><span>Computer Vision</span><span>LoRA</span><span>DPO</span><span>GRPO</span><span>AI Agent Security</span><span>Topic Modeling (BERTopic)</span><span>LLM-as-Judge</span><span>pass@k</span><span>Human Annotation Studies</span><span>Inter-Rater Agreement</span><span>Significance Testing</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-header">
           <svg class="skill-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
           <h3>Languages</h3>
         </div>
         <div class="skill-tags">
-          <span>Java</span><span>Python</span><span>Dart</span><span>Scala</span><span>C / C++</span><span>JavaScript</span><span>SQL</span>
+          <span>Java</span><span>Python</span><span>Dart</span><span>Scala</span><span>C / C++</span><span>JavaScript</span><span>TypeScript</span><span>SQL</span>
         </div>
       </div>
 
@@ -574,17 +685,7 @@
           <h3>Frameworks &amp; Libraries</h3>
         </div>
         <div class="skill-tags">
-          <span>Flutter</span><span>Spring Boot</span><span>Node.js / Express</span><span>PyTorch</span><span>scikit-learn</span><span>Hugging Face</span>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <div class="skill-card-header">
-          <svg class="skill-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-          <h3>AI &amp; Machine Learning</h3>
-        </div>
-        <div class="skill-tags">
-          <span>LLMs &amp; RAG</span><span>Deep Learning</span><span>NLP</span><span>Computer Vision</span><span>LoRA Fine-Tuning</span><span>Model Evaluation</span>
+          <span>Flutter</span><span>React Native</span><span>React</span><span>Spring Boot</span><span>Node.js / Express</span><span>REST API integration</span><span>OAuth2 / OIDC</span><span>PyTorch</span><span>scikit-learn</span><span>Hugging Face Transformers</span><span>vLLM</span>
         </div>
       </div>
 
@@ -594,7 +695,7 @@
           <h3>Data, Cloud &amp; Tools</h3>
         </div>
         <div class="skill-tags">
-          <span>Firebase</span><span>Supabase</span><span>PostgreSQL</span><span>MongoDB</span><span>AWS</span><span>Docker</span><span>Git</span><span>Figma</span>
+          <span>Firebase</span><span>Supabase</span><span>PostgreSQL</span><span>MongoDB</span><span>AWS</span><span>Modal</span><span>Slurm</span><span>Docker</span><span>CI/CD</span><span>Git</span><span>Claude Code</span><span>Figma</span>
         </div>
       </div>
 
@@ -608,8 +709,18 @@
         </div>
       </div>
 
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <svg class="skill-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          <h3>Data Analysis</h3>
+        </div>
+        <div class="skill-tags">
+          <span>pandas</span><span>NumPy</span><span>SciPy</span><span>Parquet</span><span>Discrete-Event Simulation</span><span>GPU Cost &amp; Utilization Analysis</span>
+        </div>
+      </div>
+
     </div>
-    <p class="skills-note"><span>Spoken languages</span> Arabic (fluent) · English (fluent)</p>
+    <p class="skills-note"><span>Spoken languages</span> Arabic (native) · English (fluent)</p>
   </section>
 
   <!-- ============ BEYOND CODE ============ -->
@@ -621,10 +732,10 @@
         15+ Years Community Leadership
       </div>
       <p class="beyond-text">
-        I've volunteered for <strong>15+ years</strong> supporting elderly individuals, orphans, and community members with disabilities in Egypt. Since 2020, I’ve led volunteer training and operational coordination at the same organization — which directly inspired me to build the custom <a href="#tab-volunteer" class="beyond-link">Volunteer Service Management App</a> featured in my projects above.
+        I've volunteered for <strong>15+ years</strong> with elderly people, orphans and people with disabilities in Egypt. Since 2020 I've led volunteer training and coordination at the same organization, and that's what got me to build the <a href="#tab-volunteer" class="beyond-link">Volunteer Service Management App</a> above.
       </p>
       <blockquote class="beyond-quote">
-        “The best software I’ve shipped is the kind my own community depends on every single day.”
+        “The app I'm proudest of is the one my own community uses every day.”
       </blockquote>
     </div>
   </section>
@@ -689,6 +800,14 @@
     shelf.insertBefore(curveSvg, shelf.firstChild);
     var curvePath = curveSvg.querySelector('path');
 
+    // every tile gets a slot: up to n/2 slots on each side of the centre.
+    // Past two slots the spacing tightens so a longer row still fits the frame.
+    var maxDist = Math.floor(n / 2);
+    var outerStep = maxDist > 2 ? 0.55 : 0.7;
+    function slotX(dist) { return dist <= 1 ? dist * 0.95 : 0.95 + (dist - 1) * outerStep; }
+    function slotY(dist) { return dist <= 1 ? dist * 16 : 16 + (dist - 1) * 16; }
+    var prevRel = [];
+
     function drawCurve() {
       var W = shelf.clientWidth, H = shelf.clientHeight;
       if (!W || !H) return;
@@ -697,12 +816,10 @@
 
       // one point per slot, using the same x/y maths that positions the tiles
       var pts = [];
-      for (var d = -2; d <= 2; d++) {
+      var span = Math.max(maxDist, 2);
+      for (var d = -span; d <= span; d++) {
         var dist = Math.abs(d), dir = d < 0 ? -1 : 1;
-        pts.push([
-          W / 2 + dir * w * (dist <= 1 ? dist * 0.95 : 0.95 + (dist - 1) * 0.7),
-          H / 2 + (dist <= 1 ? dist * 16 : 16 + (dist - 1) * 16)
-        ]);
+        pts.push([W / 2 + dir * w * slotX(dist), H / 2 + slotY(dist)]);
       }
       // carry the end slope out to both edges so the curve leaves the frame
       function extend(a, b, x) { return [x, a[1] + (a[1] - b[1]) / (a[0] - b[0]) * (x - a[0])]; }
@@ -733,6 +850,7 @@
       var f = (customFocus !== undefined) ? customFocus : focus;
       currentFloat = f;
       var w = tiles[0].offsetWidth || 190;
+      var wrapped = [];
       tiles.forEach(function (tile, i) {
         var rel = (i - f) % n;
         if (rel > n / 2) rel -= n;
@@ -745,13 +863,22 @@
           : (0.82 - Math.min(dist - 1, 1) * 0.18);
         if (scale < 0.64) scale = 0.64;
 
-        var x = dir * w * (dist <= 1 ? dist * 0.95 : 0.95 + (dist - 1) * 0.7);
-        var y = dist <= 1 ? dist * 16 : 16 + (dist - 1) * 16;
-        var far = dist > 2.2;
+        var x = dir * w * slotX(dist);
+        var y = slotY(dist);
+        var far = dist > maxDist + 0.2;
 
         // keep the card itself opaque so the hairline stays hidden behind it;
         // depth is expressed by dimming the contents instead (see --depth in CSS)
         tile.style.opacity = far ? '0' : '1';
+
+        // a tile wrapping from one end of the row to the other jumps instead of
+        // flying across: hide it for a frame with no transition, then fade back in
+        if (prevRel[i] !== undefined && Math.abs(rel - prevRel[i]) > n / 2) {
+          tile.style.transition = 'none';
+          tile.style.opacity = '0';
+          wrapped.push(tile);
+        }
+        prevRel[i] = rel;
         tile.style.setProperty('--depth', Math.min(dist, 2).toFixed(2));
         tile.style.transform = 'translate3d(' + x + 'px, ' + y + 'px, 0) scale(' + scale + ')';
         tile.style.zIndex = String(Math.round(10 - dist));
@@ -761,6 +888,13 @@
         tile.setAttribute('aria-selected', isCenter ? 'true' : 'false');
         tile.tabIndex = isCenter ? 0 : -1;
       });
+
+      if (wrapped.length) {
+        void shelf.offsetWidth;   // commit the jump before transitions come back
+        requestAnimationFrame(function () {
+          wrapped.forEach(function (t) { t.style.transition = ''; t.style.opacity = '1'; });
+        });
+      }
 
       var centerIndex = ((Math.round(f) % n) + n) % n;
       panels.forEach(function (panel, i) { 
